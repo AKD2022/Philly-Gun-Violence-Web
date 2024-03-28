@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--CSS Files-->
+    <link rel="stylesheet" href="CSS/statistics.css">
+    <link rel="stylesheet" href="CSS/generals.css">
+
+     <!--GSAP Scrolltrigger Imports-->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!--Website Icon-->
+    <link rel="icon" href="images/Website-logo.png">
+
+    <!--Title-->
+    <title>Statistics - Numbers</title>
+    
+</head>
+<body> 
+    <!--Hamburger Menu Starts-->
+    <div class="menu-wrap">
+        <input type="checkbox" class="toggler">
+        <div class="hamburger">
+            <div></div>
+    </div>
+    <div class="menu">
+    <div>
+        <div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="statistics.html" style="border-bottom-width: 5px; border-bottom-style: solid;">Statistics - Numbers</a></li>
+                <li><a href="where.html">Statistics - Location</a></li>
+                <li><a href="prevention.html">Prevention</a></li>
+                <li><a href="IncidentReporting.html">Incident Reporting</a></li>
+            </ul>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!--Preloader-->
+    <section class="preloader"></section>
+
+    <!--Slide Show starts-->
+    <section class="panel first">
+        <div>
+        <h1>Statistics - Numbers</h1>
+        <p>When we look at the statistics of gun violence in Philadelphia, its important to take the age, the race, and the amount of fatalities.
+            Below, I have provided pie charts and line graphs comparing the amount of Fatalities vs. Non-Fatal gun violence cases by year starting 
+            from 2015, the ages, and the races that were most affected by gun violence in 2023. 
+        </p>
+        
+        </div>   
+    </section>
+    
+    
+    <section class="panel age">
+        <div class="description">
+            <div class="header">
+                <h1>Age</h1>
+            </div>
+            <div class="info">
+                <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim recusandae, sit esse sequi commodi porro 
+                reiciendis, modi blanditiis aliquam praesentium cupiditate amet dignissimos odit, tenetur magnam fuga nesciunt. Molestiae,
+                labore?
+                </p>
+            </div>
+        </div>
+        <div class="chart-parent">
+            <canvas id="myChart2"></canvas>
+        </div>
+    </section>
+    <section class="panel race">
+        <div class="description">
+            <div class="header">
+                <h1>Race/Ethnicity</h1>
+            </div>
+            <div class="info">
+                <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim recusandae, sit esse sequi commodi porro 
+                reiciendis, modi blanditiis aliquam praesentium cupiditate amet dignissimos odit, tenetur magnam fuga nesciunt. Molestiae,
+                labore?
+                </p>
+            </div>
+        </div>
+        <div class="chart-parent">
+            <canvas id="myChart"></canvas>
+        </div>
+    </section>
+    <section class="panel both">
+        <div class="description">
+            <div class="header">
+                <h1>Race/Ethnicity & Age</h1>
+            </div>
+            <div class="info">
+                <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim recusandae, sit esse sequi commodi porro 
+                reiciendis, modi blanditiis aliquam praesentium cupiditate amet dignissimos odit, tenetur magnam fuga nesciunt. Molestiae,
+                labore?
+                </p>
+            </div>
+        </div>
+        <div class="chart-parent bt">
+            <canvas id="chart"></canvas>
+        </div>
+    </section>
+    <section class="panel bothuf">
+        <div class="description uf">
+            <div class="header">
+                <h1>Fatal vs Unfatal</h1>
+            </div>
+            <div class="info">
+                <p>
+                This chart compares the amount of fatal and unfatal gun violence cases in Philadlephia. From this,
+                we are able to see that
+                </p>
+            </div>
+        </div>
+        <div class="chart-parent bt bc">
+            <canvas id="lineChart"></canvas>
+        </div>
+    </section>
+    <section class="panel next">
+        <div class="ntext">
+            <h1>Lets Keep Going</h1>
+            <p>Now that we have went over the most important statistics, its time to learn where it happens
+            While were doing that, we will also get a little bit more in depth statistics about each individual
+            area.
+            </p>
+            <a href="where.html" class="btn">Learn Where</a>
+        </div>
+    </section>
+
+    <!--Slideshow Ends-->
+    <!--To Next Ends-->
+
+    <!--ChartJS CDN-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="JS/statistics.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        setTimeout(function() {
+            $('.preloader').fadeToggle();
+        }, 750);
+    </script>
+</body>
+</html>

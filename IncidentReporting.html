@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incident Reporting</title>
+    <link rel="stylesheet" href="CSS/IncidentReporting.css">
+    <link rel="stylesheet" href="CSS/generals.css">
+</head>
+<body>
+     <!--Hamburger Menu Starts-->
+
+     <div class="menu-wrap">
+        <input type="checkbox" class="toggler">
+        <div class="hamburger">
+            <div></div>
+    </div>
+    <div class="menu">
+    <div>
+        <div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="statistics.html">Statistics - Numbers</a></li>
+                <li><a href="where.html">Statistics - Location</a></li>
+                <li><a href="prevention.html">Prevention</a></li>
+                <li><a href="IncidentReporting.html" style="border-bottom-width: 5px; border-bottom-style: solid;">Incident Reporting</a></li>
+            </ul>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!--Preloader-->
+    <section class="preloader"></section>
+    
+    <div id="container" style="display: none;">
+        <form action="" id="incidentForm">
+            <div class="alert">Your Report has been sent</div>
+            <div class="inputBox">
+                <input type="text" id="location" placeholder="Location of Incident">
+            </div>
+
+            <div class="inputBox">
+                <input type="date" id="date" placeholder="Date of Incident">
+            </div>
+
+            <div class="inputBox">
+                <textarea id="descContent" cols="30" rows="10" placeholder="Short Description of the incident"></textarea>
+            </div>
+
+            <div class="inputBox">
+                <button type="submit">Submit</button>
+            </div>
+            <a class="btn" id="closeFormBtn" onclick="closeForm()">Close</a>
+        </form>
+    </div>
+
+    <div id="tableContainer">
+        <table>
+            <thead>
+                <tr>
+                    <th>Location</th>
+                    <th>Date</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody id="incidentTableBody">
+                <!-- Table rows will be inserted here based on the info -->
+            </tbody>
+        </table>
+    </div>
+
+    <a id="openFormButton" class="btn" onclick="window.openForm()" >Report an incident</a>
+
+    
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-database.js"></script>
+    <script src="JS/IncidentReporting.js" type="module"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        setTimeout(function() {
+            $('.preloader').fadeToggle();
+        }, 750);
+    </script>
+</body>
+</html>

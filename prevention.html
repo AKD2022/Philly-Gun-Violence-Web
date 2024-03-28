@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--CSS Files-->
+    <link rel="stylesheet" href="CSS/prevention.css">
+    <link rel="stylesheet" href="CSS/generals.css">
+
+     <!--GSAP Scrolltrigger Imports-->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!--Font-Awesome Imports-->
+    <script src="https://kit.fontawesome.com/4d72ef9868.js" crossorigin="anonymous"></script>
+
+    <!--Website Icon-->
+    <link rel="icon" href="images/Website-logo.png">
+
+    <!--Title-->
+    <title>Prevention</title>
+    
+</head>
+<body>
+        
+    <!--Hamburger Menu Starts-->
+
+    <div class="menu-wrap">
+        <input type="checkbox" class="toggler">
+        <div class="hamburger">
+            <div></div>
+    </div>
+    <div class="menu">
+    <div>
+        <div>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="statistics.html">Statistics - Numbers</a></li>
+              <li><a href="where.html">Statistics - Location</a></li>
+              <li><a href="prevention.html" style="border-bottom-width: 5px; border-bottom-style: solid;">Prevention</a></li>
+              <li><a href="IncidentReporting.html">Incident Reporting</a></li>
+            </ul>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!--Preloader-->
+    <section class="preloader"></section>
+
+    <!--Slide Show starts-->
+    <section class="home">
+      <div>
+        <h1>Prevention</h1>
+        <p>Now that you know how much and where gun violence happens, its time to take action. We need to figure out how 
+          to prevent it from happening. But before we are able to find out how to stop it, we need to find the main causes
+          of it. There are a plethora of different causes, but below, I have divided them into three main categories. From 
+          there, we will dive in to the prevention step, and find ways to prevent the violence from happening. </p>
+       </div>   
+    </section>
+
+    
+   <!--Info Starts-->
+  <div class="container">
+
+    <!--Cause One-->
+    <div class="card card-1" onclick="expandCause('card1')">
+      <div class="content">
+        <h2>Cause 1</h2>
+        <p>cause 1...</p>
+        <button class="readMore" onclick="expandCause('card1', event)">Read More</button>
+      </div>
+    </div>
+
+    <div id="expanded-view-1">
+      <div class="slider">
+
+        <!--Slide 1-->
+        <div class="slide">
+          <div class="slide1-container">
+            <h1>Cause #1: Poverty</h1>
+            <p>Poverty is a big cause of gun violence. Almost 25% of people in philadelphia live in poverty, leading to
+              hopelessness and desperation. Poverty often restricts individuals access to employment. This creates
+              an open area for high stress and this could lead to desperation. Poverty also means a lack of resources
+              and affordable healthcare. Without these resources, people could feel marginalized or disconnected
+              from the rest of society, leading to social unrest and/or illegal activites. 
+            </p>
+            <p class="indicator">1/2</p>
+          </div>
+        </div>
+
+        <!--Slide 2-->
+        <div class="slide">
+          <div class="slide1-container">
+            <h1>Ways to Prevent Poverty:</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo iure voluptate id illum iste vitae atque 
+            cumque eius illo exercitationem voluptas, commodi iusto, cupiditate harum veritatis odio sit dolores sint.</p>
+            <p class="indicator">2/2</p>
+            <button class="close-button" onclick="closeExpandedView()">Close</button>
+          </div>
+        </div>
+      </div>
+
+      <!--Arrows-->
+      <div class="arrows left">
+        <i class="fa-solid fa-angle-left" onclick="prevSlide(0)"></i>
+      </div>
+      <div class="arrows right">
+        <i class="fa-solid fa-angle-right" onclick="nextSlide(0)"></i>
+      </div>
+    </div>
+    
+
+    <!--Cause Two-->
+    <div class="card card-2" onclick="expandCause('card2')">
+      <div class="content">
+        <h2>Cause 2</h2>
+        <p>cause 2...</p>
+        <button class="readMore" onclick="expandCause('card2', event)">Read More</button>
+      </div>
+    </div>
+
+    <div id="expanded-view-2">
+      <div class="slider">
+
+        <!--Slide 1-->
+        <div class="slide">
+          <div class="slide2-container">
+            <h1>Cause #2: Gang Activities</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem nulla consequuntur, blanditiis rem possimus minus veritatis 
+              officia! Facilis dicta a corrupti, labore sit aspernatur rem tempore consequatur, deleniti minus laudantium maiores! Voluptas
+              nihil cupiditate rem repudiandae ullam necessitatibus dolore libero fugit suscipit! Dignissimos sed fugit quos illo sapiente 
+              excepturi quod nobis natus perferendis neque nisi consequatur tempora ex, vitae reprehenderit!
+            </p>
+            <p class="indicator">1/2</p>
+          </div>
+        </div>
+
+        <!--Slide 2-->
+        <div class="slide">
+          <div class="slide2-container">
+            <h1>Prevention</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo iure voluptate id illum iste vitae atque 
+            cumque eius illo exercitationem voluptas, commodi iusto, cupiditate harum veritatis odio sit dolores sint.</p>
+            <p class="indicator">2/2</p>
+            <button class="close-button" onclick="closeExpandedView()">Close</button>
+          </div>
+        </div>
+      </div>
+
+      <!--Arrows-->
+      <div class="arrows left">
+        <i class="fa-solid fa-angle-left" onclick="prevSlide(1)"></i>
+      </div>
+      <div class="arrows right">
+        <i class="fa-solid fa-angle-right" onclick="nextSlide(1)"></i>
+      </div>
+    </div>
+
+    <!--Cause Three-->
+    <div class="card card-3" onclick="expandCause('card3')">
+      <div class="content">
+        <h2>Cause 3</h2>
+        <p>cause 3...</p>
+        <button class="readMore" onclick="expandCause('card3', event)">Read More</button>
+      </div>
+    </div>
+
+    <div id="expanded-view-3">
+      <div class="slider">
+
+        <!--Slide 1-->
+        <div class="slide">
+          <div class="slide3-container">
+            <h1>Cause #3: Community Trauma</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem nulla consequuntur, blanditiis rem possimus minus veritatis 
+              officia! Facilis dicta a corrupti, labore sit aspernatur rem tempore consequatur, deleniti minus laudantium maiores! Voluptas
+              nihil cupiditate rem repudiandae ullam necessitatibus dolore libero fugit suscipit! Dignissimos sed fugit quos illo sapiente 
+              excepturi quod nobis natus perferendis neque nisi consequatur tempora ex, vitae reprehenderit!
+            </p>
+            <p class="indicator">1/2</p>
+          </div>
+        </div>
+
+        <!--Slide 2-->
+        <div class="slide">
+          <div class="slide3-container">
+            <h1>Prevention</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo iure voluptate id illum iste vitae atque 
+            cumque eius illo exercitationem voluptas, commodi iusto, cupiditate harum veritatis odio sit dolores sint.</p>
+            <p class="indicator">2/2</p>
+            <button class="close-button" onclick="closeExpandedView()">Close</button>
+          </div>
+        </div>
+      </div>
+
+      <!--Arrows-->
+      <div class="arrows left">
+        <i class="fa-solid fa-angle-left" onclick="prevSlide(2)"></i>
+      </div>
+      <div class="arrows right">
+        <i class="fa-solid fa-angle-right" onclick="nextSlide(2)"></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="final">
+    
+  </div>
+
+    
+    <script src="JS/prevention.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        setTimeout(function() {
+            $('.preloader').fadeToggle();
+        }, 750);
+    </script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--GSAP Scrolltrigger Imports-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!--Font-Awesome Imports-->
+    <script src="https://kit.fontawesome.com/4d72ef9868.js" crossorigin="anonymous"></script>
+
+    <!--Leaflet Imports-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+
+    <link rel="stylesheet" href="CSS/where.css">
+    <link rel="stylesheet" href="CSS/generals.css">
+    <link rel="icon" href="images/Website-logo.png">  
+    <title>Where it happens</title>
+</head>
+<body>
+<!--Navbar Start-->
+
+<div class="menu-wrap">
+    <input type="checkbox" class="toggler">
+    <div class="hamburger">
+        <div></div>
+</div>
+<div class="menu">
+  <div>
+      <div>
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="statistics.html" >Statistics - Numbers</a></li>
+              <li><a href="where.html"style="border-bottom-width: 5px; border-bottom-style: solid;">Statistics - Location</a></li>
+              <li><a href="prevention.html">Prevention</a></li>
+              <li><a href="IncidentReporting.html">Incident Reporting</a></li>
+          </ul>
+        </div>
+    </div>
+  </div>
+</div>
+<!--Navbar End-->
+
+<!--Preloader-->
+<section class="preloader"></section>
+
+<!--Home Starts-->
+
+<div class="container">
+
+  <div class="panel firstContainer">
+
+    <!--Intro Starts -->
+    <div class="intro">
+      <h1>Learn Where</h1>
+      <p>You know how much gun violence happens. You have the general statistics. But to get detailed statistics
+        we need to dive deeper into philaldephia. Instead of looking at how much gun violence happens in Philadelphia
+        as a whole, we need to know how much it happens in certain areas of Philly. By doing this, we will get a detailed 
+        view of Gun Violence in Philly.
+      </p>
+      <div class="animate"><i class="fa-solid fa-angle-down"></i></div>
+    </div>
+  
+    <!--Intro Ends-->
+  </div>
+
+  <!--North Philly-->
+  <div class="panel overview">
+
+    <!--Intro To North Philly-->
+    <div>
+      <div class="overview-intro">
+       <h1 class="overview-header">Overview of the Maps</h1>
+       <p>North Philadelphia's gun violence situation is a deeply entrenched issue that continues to afflict the community. High levels of crime, 
+        fueled by socioeconomic challenges, gang activity, and the drug trade, contribute to a cycle of violence and a pervasive sense of insecurity.
+        The impact on families and the community as a whole is devastating, with lives lost and lasting trauma endured.</p>
+      
+      <div class="indication">
+        <i class="fa-solid fa-arrow-right"></i>
+        <p>1/4</p>
+      </div>
+       
+      </div>
+    </div>
+
+  </div>
+
+  <!--North Philly Map-->
+  <section class="panel northPhilly">
+    <div>
+      <h1>North Philly</h1> 
+      <p id="dp">This is a map that outlines North Philly's gun violence. You can hover or click on certain areas on the map for 
+        detailed statistics. 
+      </p>
+
+      <button class="button" id="expandMapNorth" onclick="expandMap('northPhilly')">Click to Expand Map</button>
+      <button class="button" id="closeMapNorth" onclick="closeMap()">Close Map</button>
+      <div id="northMap"></div>
+      
+
+      <div class="map-text">
+          <p>Red circles indicate high gun violence areas (100+ incidents)</p>
+          <p>Yellow circles indicate medium gun violence areas (50-99 incidents)</p>
+          <p>Green circles indicate low gun violence areas (below 20 incidents)</p>
+      </div>
+      
+      <div class="summary">
+        <h2 class="header">What can we learn from this?</h1>
+        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id nam dolore eum, ducimus praesentium 
+          quis eveniet blanditiis maxime? Explicabo iusto adipisci possimus quaerat at aut quidem. Optio obcaecati assumenda 
+          labore.</p>
+      </div>
+
+      <div class="indication">
+        <i class="fa-solid fa-arrow-right"></i>
+        <p>2/4</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!--South Philly 2-->
+  <section class="panel southPhilly">
+    <h1>South Philly</h1> 
+    <p class="dp">
+      This is a map that outlines south Philly's gun violence. You can hover or click on certain areas on the map for 
+      detailed statistics.
+    </p>
+
+    <button class="button" id="expandMapSouth" onclick="expandMap('southPhilly')">Click to Expand Map</button>
+    <button class="button" id="closeMapSouth" onclick="closeMap()">Close Map</button>
+    <div id="southMap"></div>
+    
+
+    <div class="map-text">
+      <p>Red circles indicate high gun violence areas (100+ incidents)</p>
+      <p>Yellow circles indicate medium gun violence areas (50-99 incidents)</p>
+      <p>Green circles indicate low gun violence areas (below 20 incidents)</p>
+    </div>
+  
+    <div class="summary">
+      <h2 class="header">What can we learn from this?</h1>
+      <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id nam dolore eum, ducimus praesentium 
+      quis eveniet blanditiis maxime? Explicabo iusto adipisci possimus quaerat at aut quidem. Optio obcaecati assumenda 
+      labore.</p>
+    </div>
+
+    <div class="indication">
+      <i class="fa-solid fa-arrow-right"></i>
+      <p>3/4</p>
+    </div>
+
+  </section>
+
+  <!--West 2-->
+  <section class="panel westPhilly">
+    <h1>West Philly</h1> 
+    <p class="dp">
+      This is a map that outlines West Philly's gun violence crisis. 
+    </p>
+
+    <button class="button" id="expandMapWest" onclick="expandMap('westPhilly')">Click to Expand Map</button>
+    <button class="button" id="closeMapWest" onclick="closeMap()">Close Map</button>
+    <div id="westMap"></div>
+    
+
+    <div class="map-text">
+      <p>Red circles indicate high gun violence areas (100+ incidents)</p>
+      <p>Yellow circles indicate medium gun violence areas (50-99 incidents)</p>
+      <p>Green circles indicate low gun violence areas (below 20 incidents)</p>
+    </div>
+  
+    <div class="summary">
+      <h2 class="header">What can we learn from this?</h1>
+      <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id nam dolore eum, ducimus praesentium 
+      quis eveniet blanditiis maxime? Explicabo iusto adipisci possimus quaerat at aut quidem. Optio obcaecati assumenda 
+      labore.</p>
+    </div>
+
+    <div class="indication">
+      <i class="fa-solid fa-arrow-right"></i>
+      <p>4/4</p>
+    </div>
+
+  </section>
+
+  <section class="panel toNext">
+      <h1>Let's keep going</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio quaerat dolorem nisi, sint deleniti eum laudantium 
+        mollitia minima architecto sunt, veniam, consequuntur ipsum quisquam soluta eligendi nesciunt ex rerum neque qui hic
+        possimus. Laborum ex optio inventore delectus illum reiciendis ad! Consequuntur incidunt nesciunt optio, commodi 
+        perferendis molestiae ipsum, dicta, assumenda fugit cupiditate aperiam hic maxime? Mollitia illum sit dolorum consequuntur
+        facilis corporis ab, repudiandae voluptatum cum, perferendis sequi sapiente!
+      </p>
+      <a href="prevention.html" class="btn">Learn to Prevent</a>
+  </section>
+</div>
+
+
+
+
+<script src="JS/where.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        setTimeout(function() {
+            $('.preloader').fadeToggle();
+        }, 750);
+    </script>
+</body>
+</html>
