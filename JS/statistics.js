@@ -90,7 +90,7 @@ const data = {
       yAxisID: 'y'     
   }, 
   {
-      label: 'Ages Invlolved',
+      label: 'Ages Involved',
       data: [
         161, 746, 534, 202, 23
       ],

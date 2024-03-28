@@ -332,7 +332,15 @@ body {
     }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 450px) {
+    .first h1 {
+        padding-right: 20px;
+    }
+
+    .first h1, .first p {
+        transform: translateY(-1em);
+    }
+
     .age h1, .race h1, .both h1,  .bothuf h1 { 
         font-size: 40px;
     }
@@ -352,6 +360,7 @@ body {
 
     .bt {
         width: 100vw;
+        height: 120vh;
     }
 
     .bc {
@@ -378,6 +387,7 @@ body {
         overflow-y: hidden;
         overflow-x: hidden;
     }
+
     .chart-parent {
         width: 90vw;
         height: 100vh;
@@ -385,6 +395,7 @@ body {
 
     .bt {
         width: 108vw;
+        height: 108vh;
     }
 }
 
@@ -405,7 +416,9 @@ body {
     }
 
     .bt {
-       transform: translateY(-3em);
+        width: 100vw;
+        height: 100vh;
+        transform: translateY(-3em);
     }
 
     .bc {
@@ -417,6 +430,16 @@ body {
     .description {
         padding-right: 50px;
     }
+
+    .chart-parent {
+        width: 90vw;
+        height: 100vh;
+    }
 }
 
+@media (max-width: 279px) {
+    body {
+        font-size: 85%;
+    }
+}
 /* Change flex-direction to column from 768px */
