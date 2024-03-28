@@ -307,6 +307,10 @@ body {
     .ntext {
         transform: translateY(-10em);
     }
+
+    .preloader {
+        background-size: 50%;
+    }
 }
 
 @media (max-width: 583px) {
