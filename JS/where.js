@@ -21,7 +21,7 @@ var width;
 
 /* North Philly Map JS */
 function initializeNorthMap() {
-
+  var zoomLevel = 10;
   const northPolygon = [ 
     [40.084192, -75.176304],
     [40.046619, -75.111073],
@@ -57,12 +57,12 @@ function initializeNorthMap() {
     [40.091464, -75.343352]
   ];
 
-  var map = L.map('northMap').setView([40.007447, -75.140599], 10);
+  var map = L.map('northMap').setView([40.007447, -75.140599], zoomLevel);
 
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxBounds: bounds,
       maxZoom: 14,
-      minZoom: 10, 
+      minZoom: 9, 
       attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
   }).addTo(map);
 
@@ -118,20 +118,9 @@ function initializeNorthMap() {
 
 
   /* Resizing Leaflet Map */
-  window.addEventListener('resize', function(event){
-    var width = window.innerWidth;
-    console.log(width);
-    if (width < 1440) { 
-      map.setView(new L.LatLng(40.001662, -75.140599, 8))
-    } else if (width < 1024) {
-      map.setView(new L.LatLng(39.978777, -75.122059, 8))
-    } else if (width < 981) {
-      map.setView(new L.LatLng(40.007447, -75.140599, 8));
-    } else if (width < 768) {
-      map.setView(new L.LatLng(40.007447, -75.140599, 8));
-    }
-  });
-
+  if (window.innerWidth <= 375) {
+    map.setZoom(9);
+  }
 }
 
 
@@ -169,7 +158,7 @@ function initializeSouthMap() {
     [39.922179, -75.278431]  //left
   ];
 
-  var southPhillyMap = L.map('southMap').setView([39.923078, -75.172518], 10);
+  var southPhillyMap = L.map('southMap').setView([39.923078, -75.172518], 11);
 
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxBounds: boundsSouth,
@@ -205,6 +194,7 @@ function initializeSouthMap() {
   circle.bindTooltip("Estimated amount of cases in this area: 117-130", { direction: 'top' });
 
    /* Resizing Leaflet Map */
+   /*
    window.addEventListener('resize', function(event){
     var width = window.innerWidth;
     console.log(width);
@@ -215,9 +205,10 @@ function initializeSouthMap() {
     } else if (width < 981) {
       map.setView(new L.LatLng(39.925316, -75.171488, 8));
     } else if (width < 768) {
-      map.setView(new L.LatLng(39.923210, -75.170115, 8));
+      map.setView(new L.LatLng(39.922486, -75.176467, 8));
     }
   });
+  */
 
 }
 
@@ -269,17 +260,17 @@ function initializeWestMap() {
   ]
 
   const westPhillyBounds = [
-    [40.040328, -75.216760], //top 
-    [39.944096, -74.972585], //right
-    [39.877876, -75.220836], //bottom 
-    [39.979748, -75.347849]  //left
+    [40.030139, -75.201167], //top 
+    [39.956580, -75.074355], //right
+    [39.876283, -75.226318], //bottom 
+    [39.980732, -75.331632]  //left
   ];
 
-  var westPhillyMap = L.map('westMap').setView([39.887565, -75.094032], 11);
+  var westPhillyMap = L.map('westMap').setView([39.973798, -75.225443], 11);
 
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 14,
-      minZoom: 11, 
+      minZoom: 10, 
       attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
   }).addTo(westPhillyMap);
   
@@ -396,5 +387,6 @@ function closeMap() {
   closeMapButtonSouth.style.display = 'none'; 
   closeMapButtonWest.style.display = 'none';
 }
+
 
 

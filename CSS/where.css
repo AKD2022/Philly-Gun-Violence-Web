@@ -371,9 +371,15 @@ html, body {
 		width: 44em !important;
 	}
 
-	html {
+	.overview, .firstContainer, .toNext {
 		font-size: 90%;
 	}
+
+	.northPhilly h1, .southPhilly h1, .westPhilly h1 {
+		font-size: 3.2em;
+		padding-top: 2em;
+	}
+	
 }
 
 @media (max-width: 768px) {
@@ -387,5 +393,136 @@ html, body {
 
 	.overview, .firstContainer, .toNext {
 		font-size: 80%;
+	}
+
+	.northPhilly .dp {
+		font-size: 1em;
+	}
+
+	.southPhilly .dp {
+		font-size: 1em;
+	}
+
+	.westPhilly .dp {
+		font-size: 1em;
+	}
+
+	.indication i {
+		font-size: 30px;
+	}
+	
+	.indication p {
+		font-size: 15px;
+	}
+
+	.northPhilly h1, .southPhilly h1, .westPhilly h1 {
+		font-size: 3em;
+		padding-top: 1em;
+	}
+
+	.map-text, .summary {
+		font-size: 90%;
+	}
+}
+
+
+
+@media (max-width: 500px) {
+	.overview, .firstContainer, .toNext {
+		font-size: 75%;
+	}
+
+	#northMap.visible, #southMap.visible, #westMap.visible {
+		height: 25em !important;
+		width: 35em !important;
+	}
+}
+
+@media (max-width: 437px) {
+	.firstContainer p {
+		transform: translateY(-2em);
+	}
+
+	.overview-intro p, .toNext p {
+		transform: translateY(-3.4em);
+	}
+
+	.overview-intro h1, .toNext h1 {
+		transform: translateY(-1.2em);
+	}
+
+	.toNext a {
+		transform: translateY(-3.4em);
+	}
+
+	#northMap.visible, #southMap.visible, #westMap.visible {
+		height: 25em !important;
+		width: 28em !important;
+	}
+}
+
+@media (max-width: 375px) {
+	.indication i {
+		font-size: 25px;
+	}
+	
+	.indication p {
+		font-size: 12px;
+	}
+
+	.northPhilly h1, .southPhilly h1, .westPhilly h1 {
+		font-size: 2em;
+		padding-top: 1em;
+	}
+
+	#northMap.visible, #southMap.visible, #westMap.visible {
+		height: 20em !important;
+		width: 20em !important;
+	}
+
+	.firstContainer p {
+		transform: translateY(-3em);
+	}
+
+	.firstContainer h1 {
+		transform: translateY(-1em);
+	}
+
+	.overview-intro p, .toNext p {
+		transform: translateY(-4.6em);
+	}
+
+	.overview-intro h1, .toNext h1 {
+		transform: translateY(-1.9em);
+	}
+
+	.toNext a {
+		transform: translateY(-3.9em);
+	}
+}
+
+@media (max-width: 343px) {
+	.firstContainer p {
+		transform: translateY(-4em);
+	}
+
+	.firstContainer h1 {
+		transform: translateY(-2em);
+	}
+
+	.overview-intro p, .toNext p {
+		transform: translateY(-5em);
+	}
+
+	.overview-intro h1, .toNext h1 {
+		transform: translateY(-2em);
+	}
+
+	.toNext a {
+		transform: translateY(-4.9em);
+	}
+
+	.overview, .firstContainer, .toNext {
+		font-size: 70%;
 	}
 }
