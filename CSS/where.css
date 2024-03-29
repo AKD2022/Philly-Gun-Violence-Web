@@ -26,6 +26,8 @@ body {
   position: relative;
   height: unset;
   background: black;
+  padding-top: env(safe-area-inset-top); /* Adjust for top safe area */
+  padding-bottom: env(safe-area-inset-bottom); /* Adjust for bottom safe area */
 }
 
 html, body {
