@@ -49,7 +49,6 @@ html, body {
 	  rgba(0, 0, 0, 0.9)
     ),
     url(../images/philly-map.jpeg);
-
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
@@ -58,9 +57,13 @@ html, body {
 .intro p {
 	font-size: 1.5em;
 	padding: 20px;
+	position: absolute;
+	top: 43%;
 }
 
 .intro h1 {
+	position: absolute;
+	top: 36%;
 	font-size: 3em;
 }
 
@@ -130,12 +133,13 @@ html, body {
 	text-align: center;
 	align-items: center;
 	justify-content: center;
-	top: 35%;
+	top: 28%;
 	padding: 50px;
 	overflow-x: hidden;
 }
 
 .overview-header {
+	padding: 20px;
 	font-size: 3.2em;
 }
 
@@ -268,8 +272,8 @@ html, body {
 	float: left;
 	opacity: 1;
 	animation: opacityOpen 0.5s;
-	height: 50em !important;
-	width: 60em !important;
+	height: 35em !important;
+	width: 55em !important;
 	margin-right: 10px;
 	border-radius: 50px;
 }
@@ -355,19 +359,33 @@ html, body {
     width: 100vw;
     z-index: 1000;
     background: black url("../images/preloader-icon.gif") no-repeat fixed center;
-    background-size: 9%;
+    background-size: 20%;
 }
 
   
 /* Media Queries */
 
 @media (max-width: 981px) {
-	#northMap.visible {
+	#northMap.visible, #southMap.visible, #westMap.visible {
 		height: 30em !important;
 		width: 44em !important;
 	}
 
 	html {
 		font-size: 90%;
+	}
+}
+
+@media (max-width: 768px) {
+	#northMap.visible, #southMap.visible, #westMap.visible {
+		float: none;
+	}
+
+	.map-text {
+		margin-top: 10px;
+	}
+
+	.overview, .firstContainer, .toNext {
+		font-size: 80%;
 	}
 }

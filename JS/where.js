@@ -16,6 +16,8 @@ gsap.to(sections, {
   }
 });
 
+var width;
+
 
 /* North Philly Map JS */
 function initializeNorthMap() {
@@ -55,7 +57,7 @@ function initializeNorthMap() {
     [40.091464, -75.343352]
   ];
 
-  var map = L.map('northMap').setView([39.969247, -75.155946], 10);
+  var map = L.map('northMap').setView([40.007447, -75.140599], 10);
 
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxBounds: bounds,
@@ -118,12 +120,16 @@ function initializeNorthMap() {
   /* Resizing Leaflet Map */
   window.addEventListener('resize', function(event){
     var width = window.innerWidth;
-    // tablets are between 768 and 922 pixels wide
-    // phones are less than 768 pixels wide
     console.log(width);
-    if (width < 768) {
-      map.setView(new L.LatLng(39.969247, -75.119114), 8);
-    }  
+    if (width < 1440) { 
+      map.setView(new L.LatLng(40.001662, -75.140599, 8))
+    } else if (width < 1024) {
+      map.setView(new L.LatLng(39.978777, -75.122059, 8))
+    } else if (width < 981) {
+      map.setView(new L.LatLng(40.007447, -75.140599, 8));
+    } else if (width < 768) {
+      map.setView(new L.LatLng(40.007447, -75.140599, 8));
+    }
   });
 
 }
@@ -163,12 +169,12 @@ function initializeSouthMap() {
     [39.922179, -75.278431]  //left
   ];
 
-  var southPhillyMap = L.map('southMap').setView([39.919392, -75.178183], 12);
+  var southPhillyMap = L.map('southMap').setView([39.923078, -75.172518], 10);
 
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxBounds: boundsSouth,
       maxZoom: 14,
-      minZoom: 12, 
+      minZoom: 10, 
       attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
   }).addTo(southPhillyMap);
 
@@ -196,7 +202,22 @@ function initializeSouthMap() {
     radius: 4750
   }).addTo(southPhillyMap);
 
-  circle.bindTooltip("Estimated amount of cases in this area: 109-115", { direction: 'top' });
+  circle.bindTooltip("Estimated amount of cases in this area: 117-130", { direction: 'top' });
+
+   /* Resizing Leaflet Map */
+   window.addEventListener('resize', function(event){
+    var width = window.innerWidth;
+    console.log(width);
+    if (width < 1440) { 
+      map.setView(new L.LatLng(39.926567, -75.169428, 8))
+    } else if (width < 1024) {
+      map.setView(new L.LatLng(39.926106, -75.168055, 8))
+    } else if (width < 981) {
+      map.setView(new L.LatLng(39.925316, -75.171488, 8));
+    } else if (width < 768) {
+      map.setView(new L.LatLng(39.923210, -75.170115, 8));
+    }
+  });
 
 }
 
