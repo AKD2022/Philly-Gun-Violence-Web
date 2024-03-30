@@ -18,7 +18,7 @@
 html {
   overflow-x: scroll;
   height: 100%;
-  -webkit-overflow-scrolling: touch;
+  -webkit-overflow-scrolling: none;
 }
 
 body {
@@ -27,11 +27,10 @@ body {
   background: black;
   padding: 0 0 0 0px;
   margin: 0 0 0 0px;
-  overflow-y: auto;
+  overflow-y: none;
 }
 
 html, body {
-  overflow-y: auto;
   position: relative;
   overflow-x: hidden;
   margin: 0;
@@ -105,10 +104,10 @@ html, body {
 /* Info Starts */
 
 .container {
-	width: 600%;
-	height: 100vh;
-	display: flex;
-	flex-wrap: nowrap;
+    width: 600%; /* or any width you desire */
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto; /* Enable horizontal scrolling */
     animation-delay: 0.75s;
     animation: fade-in 2s;
 }
