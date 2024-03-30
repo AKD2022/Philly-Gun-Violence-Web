@@ -33,6 +33,7 @@ body {
 	max-height: 100vh;
 	background:black;
     animation-delay: 2s;
+    overflow-y: none;
 }
 
 /* Home Page Starts */
