@@ -18,20 +18,17 @@
 html {
   overflow-x: scroll;
   height: 100%;
-  -webkit-overflow-scrolling: none;
+  -webkit-overflow-scrolling: touch;
 }
 
 body {
   overflow-y: hide;
   position: relative;
+  height: 100%;
   background: black;
-  padding: 0 0 0 0px;
-  margin: 0 0 0 0px;
-  overflow-y: auto;
 }
 
 html, body {
-  position: relative;
   overflow-x: hidden;
   margin: 0;
 }
@@ -104,11 +101,10 @@ html, body {
 /* Info Starts */
 
 .container {
-    width: 600%; /* or any width you desire */
-    height: 100vh;
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto; /* Enable horizontal scrolling */
+	width: 600%;
+	height: 100vh;
+	display: flex;
+	flex-wrap: nowrap;
     animation-delay: 0.75s;
     animation: fade-in 2s;
 }
@@ -140,7 +136,6 @@ html, body {
 	top: 28%;
 	padding: 50px;
 	overflow-x: hidden;
-	overflow-y: scroll; /* Enable vertical scrolling */
 }
 
 .overview-header {

@@ -388,5 +388,7 @@ function closeMap() {
   closeMapButtonWest.style.display = 'none';
 }
 
-
+window.addEventListener('scroll', function() {
+  window.scrollTo(0, 0);
+});
 
