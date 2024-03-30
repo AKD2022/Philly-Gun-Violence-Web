@@ -24,7 +24,6 @@ html {
 body {
   overflow-y: hide;
   position: relative;
-  height:  auto;
   background: black;
   padding: 0 0 0 0px;
   margin: 0 0 0 0px;
@@ -32,6 +31,8 @@ body {
 }
 
 html, body {
+  overflow-y: auto;
+  position: relative;
   overflow-x: hidden;
   margin: 0;
 }
