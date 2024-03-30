@@ -23,10 +23,9 @@ html {
 
 body {
   overflow-y: hide;
-  position: relative;
+  position: absolute;
   height: unset;
   background: black;
-
 }
 
 html, body {
