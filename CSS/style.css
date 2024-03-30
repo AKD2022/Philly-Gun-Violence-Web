@@ -10,32 +10,6 @@
     transition: all .2s linear;
 }
 
-*::selection {
-    color: black;
-}
-
-html {
-    overflow-x: hidden;
-    overflow-y: none;
-    scroll-behavior: smooth;
-}
-
-body {
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: 0;
-    margin-right: 0;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-    height: 100vh;
-	align-items: center;
-	max-height: 100vh;
-	background:black;
-    animation-delay: 2s;
-    overflow-y: none;
-}
-
 /* Home Page Starts */
 .container {
     position: fixed;
@@ -46,6 +20,7 @@ body {
     height: 100%;
     animation: animate 30s ease-in-out infinite;
     background-size: cover;
+    background-position: center;
     text-align: center;
 }
 
