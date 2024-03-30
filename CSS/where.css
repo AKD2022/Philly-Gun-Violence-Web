@@ -24,14 +24,8 @@ html {
 body {
   overflow-y: hide;
   position: relative;
-  height: unset;
+  height: 100%;
   background: black;
-  scroll-padding-top: constant(safe-area-inset-top); /* For older iOS devices */
-  scroll-padding-top: env(safe-area-inset-top); /* For newer iOS devices */
-  padding-top: constant(safe-area-inset-top);
-  padding-top: env(safe-area-inset-top); 
-  padding-bottom: constant(safe-area-inset-bottom); 
-  padding-bottom: env(safe-area-inset-bottom);
 }
 
 html, body {
@@ -113,7 +107,10 @@ html, body {
 	flex-wrap: nowrap;
     animation-delay: 0.75s;
     animation: fade-in 2s;
+	-webkit-overflow-scrolling: touch; /* Enable smooth scrolling for iOS */
+    scroll-snap-type: x mandatory; /* Enable mandatory snap scrolling horizontally */
 }
+
 
 @keyframes fade-in {
     0%, 50% {
@@ -126,6 +123,7 @@ html, body {
 
 .panel {
 	width: 100vw;
+	flex: 0 0 auto;
 }
 
 ::-webkit-scrollbar {
