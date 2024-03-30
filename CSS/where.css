@@ -140,6 +140,7 @@ html, body {
 	top: 28%;
 	padding: 50px;
 	overflow-x: hidden;
+	overflow-y: scroll; /* Enable vertical scrolling */
 }
 
 .overview-header {
@@ -443,10 +444,6 @@ html, body {
 }
 
 @media (max-width: 437px) {
-	.container {
-		height: calc(100vh - 56px); /* Subtracting the height of browser UI elements */
-	}
-	
 	.firstContainer p {
 		transform: translateY(-2em);
 	}
