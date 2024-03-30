@@ -215,9 +215,9 @@
             $('.preloader').fadeToggle();
         }, 750);
 
-        let vh = window.innerHeight * 0.01;
-        // Then we set the value in the --vh custom property to the root of the document
-        document.documentElement.style.setProperty('--vh', `${vh}px`);
+        var vhHeight = $("body").height();
+        var chromeNavbarHeight = vhHeight - window.innerHeight;
+        $('body').css({ height: window.innerHeight, marginTop: chromeNavbarHeight });
     </script>
 </body>
 </html>
