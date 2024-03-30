@@ -24,8 +24,10 @@ html {
 body {
   overflow-y: hide;
   position: relative;
-  height: 100%;
+  height:  fixed;
   background: black;
+  padding: 0 0 0 0px;
+  margin: 0 0 0 0px;
 }
 
 html, body {
@@ -107,10 +109,7 @@ html, body {
 	flex-wrap: nowrap;
     animation-delay: 0.75s;
     animation: fade-in 2s;
-	-webkit-overflow-scrolling: touch; /* Enable smooth scrolling for iOS */
-    scroll-snap-type: x mandatory; /* Enable mandatory snap scrolling horizontally */
 }
-
 
 @keyframes fade-in {
     0%, 50% {
@@ -123,7 +122,6 @@ html, body {
 
 .panel {
 	width: 100vw;
-	flex: 0 0 auto;
 }
 
 ::-webkit-scrollbar {
