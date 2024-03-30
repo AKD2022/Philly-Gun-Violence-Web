@@ -27,7 +27,7 @@ body {
   background: black;
   padding: 0 0 0 0px;
   margin: 0 0 0 0px;
-  overflow-y: none;
+  overflow-y: auto;
 }
 
 html, body {
@@ -105,6 +105,7 @@ html, body {
 
 .container {
     width: 600%; /* or any width you desire */
+    height: 100vh;
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto; /* Enable horizontal scrolling */
@@ -442,6 +443,10 @@ html, body {
 }
 
 @media (max-width: 437px) {
+	.container {
+		height: calc(100vh - 56px); /* Subtracting the height of browser UI elements */
+	}
+	
 	.firstContainer p {
 		transform: translateY(-2em);
 	}
