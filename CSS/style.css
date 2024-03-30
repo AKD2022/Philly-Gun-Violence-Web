@@ -38,7 +38,7 @@ body {
 
 /* Home Page Starts */
 .container {
-    position: absolute;
+    position: fixed;
     background-image: url(../images/statistics-home-1.jpeg), url(../images/statistics-home-2.jpeg), url(../images/Home-1.jpeg), url(../images/statistics-home-4.jpeg), url(../images/Home-2.jpeg);
     left: 0;
     top: 0;
