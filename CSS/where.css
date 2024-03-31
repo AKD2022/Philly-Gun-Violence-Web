@@ -35,8 +35,9 @@ html, body {
 /* Intro Starts */
 .intro {
 	color: white;
-	width: 100%;
-	height: 100%;
+	height: 100vh;
+	width: 100vw;
+	padding: 50px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -56,15 +57,12 @@ html, body {
 .intro p {
 	font-size: 1.5em;
 	padding: 20px;
-	position: absolute;
-	top: 43%;
 }
 
 .intro h1 {
-	position: absolute;
-	top: 36%;
 	font-size: 3em;
 }
+
 
 .animate {
 	color: white;
@@ -127,14 +125,15 @@ html, body {
 }
 
 /* Overview of the Maps */
-.overview-intro {
-	position: absolute;
+.overview {
+	display: flex;
+	flex-direction: column;
 	text-align: center;
 	align-items: center;
 	justify-content: center;
-	top: 28%;
-	padding: 50px;
 	overflow-x: hidden;
+	padding: 50px;
+	top: 0;
 }
 
 .overview-header {
@@ -296,12 +295,12 @@ html, body {
 
 /* To Next */
 .toNext {
+	display: flex;
+	padding: 50px;
+	flex-direction: column;
 	text-align: center;
 	align-items: center;
 	justify-content: center;
-	padding-top: 23em;
-	padding-left: 50px;
-	padding-right: 50px;
 }
 
 .toNext h1 {
@@ -438,22 +437,6 @@ html, body {
 }
 
 @media (max-width: 437px) {
-	.firstContainer p {
-		transform: translateY(-2em);
-	}
-
-	.overview-intro p, .toNext p {
-		transform: translateY(-3.4em);
-	}
-
-	.overview-intro h1, .toNext h1 {
-		transform: translateY(-1.2em);
-	}
-
-	.toNext a {
-		transform: translateY(-3.4em);
-	}
-
 	#northMap.visible, #southMap.visible, #westMap.visible {
 		height: 25em !important;
 		width: 28em !important;
@@ -478,49 +461,9 @@ html, body {
 		height: 20em !important;
 		width: 20em !important;
 	}
-
-	.firstContainer p {
-		transform: translateY(-3em);
-	}
-
-	.firstContainer h1 {
-		transform: translateY(-1em);
-	}
-
-	.overview-intro p, .toNext p {
-		transform: translateY(-4.6em);
-	}
-
-	.overview-intro h1, .toNext h1 {
-		transform: translateY(-1.9em);
-	}
-
-	.toNext a {
-		transform: translateY(-3.9em);
-	}
 }
 
 @media (max-width: 343px) {
-	.firstContainer p {
-		transform: translateY(-4em);
-	}
-
-	.firstContainer h1 {
-		transform: translateY(-2em);
-	}
-
-	.overview-intro p, .toNext p {
-		transform: translateY(-5em);
-	}
-
-	.overview-intro h1, .toNext h1 {
-		transform: translateY(-2em);
-	}
-
-	.toNext a {
-		transform: translateY(-4.9em);
-	}
-
 	.overview, .firstContainer, .toNext {
 		font-size: 70%;
 	}

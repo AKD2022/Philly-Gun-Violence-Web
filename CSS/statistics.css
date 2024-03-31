@@ -59,28 +59,27 @@ body {
     height: 100vh;
     overflow-y: hidden;
     width: 100vh;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
 }
 
 .first h1 {
-    left: 0;
-    position: absolute;
     width: 100%;
-    top: 40%;
     text-align: center;
     font-size: 3em;
-    padding-left: 30px;
-    color: var(--headerColor); 
 }
 
 .first p {
     font-size: 1.5em;
-    left: 0;
-    position: absolute;
     text-align: center;
-    top: 50%;
     width: 100%;
-    padding-left: 50px;
-    padding-right: 50px;
+}
+
+h1 {
+    padding-bottom: 10px;
 }
 
 .panel {
@@ -167,20 +166,19 @@ body {
     url(../images/next_bg.jpeg);
     background-size: cover;
     background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 30px;
+    padding: 50px;
 }
 
 .next h1 {
     font-size: 3em;
-    padding-bottom: 20px;
-    padding-top: 300px;
 }
 
 .next p {
     font-size: 1.5em;
-    padding-left: 40px; 
-    padding-right: 40px;
 }
 
 .bc {
@@ -304,10 +302,6 @@ body {
         height: 75vh;
     }
 
-    .ntext {
-        transform: translateY(-10em);
-    }
-
     .preloader {
         background-size: 50%;
     }
@@ -337,14 +331,6 @@ body {
 }
 
 @media (max-width: 450px) {
-    .first h1 {
-        padding-right: 20px;
-    }
-
-    .first h1, .first p {
-        transform: translateY(-1em);
-    }
-
     .age h1, .race h1, .both h1,  .bothuf h1 { 
         font-size: 40px;
     }
@@ -378,15 +364,6 @@ body {
 }
 
 @media (max-width: 375px) {
-    .first h1{
-        transform: translateY(-3em);
-        padding: 40px;
-    }
-
-    .first p {
-        transform: translateY(-2em);
-    }
-
     .panel {
         overflow-y: hidden;
         overflow-x: hidden;

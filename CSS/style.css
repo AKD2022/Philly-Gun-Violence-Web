@@ -25,7 +25,6 @@ body {
     animation: animate 30s ease-in-out infinite;
     background-size: cover;
     background-position: center;
-    text-align: center;
 }
 
 
@@ -53,13 +52,15 @@ body {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .details {
     color: white;
     padding: 50px;
-    position: absolute;
-    top: 25%;
     text-align: left;
 }
 
@@ -166,62 +167,22 @@ h1 {
 
 
 /* Media Queries Start */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.9em;
+    }
 
-@media (max-width:967px) {
-    .container {
-        font-size: 75%;
+    p {
+        font-size: 1.1em
     }
 }
 
-@media (max-width:750px) {
-    .details p {
-        font-size: 1.5em;
+@media (max-width: 320px) {
+    h1 {
+        font-size: 2.5em;
     }
 
-    .details h1 {
-        font-size: 3.1em;
-    }
-
-}
-
-@media (max-width: 450px) {
-    .details p {
-        font-size: 1.3em;
-    }
-
-    .details h1 {
-        font-size: 2.6em;
-    }
-
-    .details {
-        transform: translateY(-8em);
-    }
-}
-
-@media (max-width: 350px) {
-    .details p {
-        font-size: 1.3em;
-    }
-
-    .details h1 {
-        font-size: 2.6em;
-    }
-
-    .details {
-        transform: translateY(-5em);
-    }
-}
-
-@media (max-width: 281px) {
-    .details p {
-        font-size: 1.3em;
-    }
-
-    .details h1 {
-        font-size: 2.3em;
-    }
-
-    .details {
-        transform: translateY(-10em);
+    p {
+        font-size: 1em
     }
 }
