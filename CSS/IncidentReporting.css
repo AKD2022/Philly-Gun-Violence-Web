@@ -16,7 +16,7 @@
 }
 
 
-body{
+body {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -127,9 +127,8 @@ body{
 /* Table */
 #tableContainer {
     max-height: 600px;
-    max-width: none;
     overflow-y: auto;
-    margin-top: 50px;
+    padding: 30px;
 }
 
 table {
@@ -203,5 +202,30 @@ th {
     z-index: 1000;
     background: black url("../images/preloader-icon.gif") no-repeat fixed center;
     background-size: 20%;
+}
+
+/* Media Queries */
+@media (max-width: 615px) {
+    table {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 474px) {
+    table {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 404px) {
+    table {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 361px) {
+    table {
+        font-size: 10px;
+    }
 }
 
