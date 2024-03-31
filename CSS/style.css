@@ -160,7 +160,7 @@ h1 {
     width: 100vw;
     z-index: 1000;
     background: black url("../images/preloader-icon.gif") no-repeat fixed center;
-    background-size: 9%;
+    background-size: 20%;
 }
 
 
