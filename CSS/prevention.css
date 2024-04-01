@@ -395,7 +395,7 @@ i:hover {
         font-size: 90%;
     }
 
-    .home {
+    .home, .final {
         font-size: 90%;
     }
 }
@@ -437,7 +437,7 @@ i:hover {
         margin-left: 2.5em;
     }
 
-    .home {
+    .home, .final {
         font-size: 70%;
     }
 
