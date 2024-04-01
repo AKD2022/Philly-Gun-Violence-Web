@@ -12,7 +12,6 @@ const firebaseConfig = {
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-
 // Reference Database
 var incidentFormDB = firebase.database().ref('IncidentForm');
 
@@ -89,7 +88,6 @@ incidentFormDB.on('value', function(snapshot) {
         var cell2 = row.insertCell(1);
         var cell3 = row.insertCell(2);
 
-
         cell1.innerHTML = childData.location;
         cell2.innerHTML = childData.date;
         cell3.innerHTML = childData.descContent;
@@ -108,7 +106,6 @@ incidentFormDB.on('value', function(snapshot) {
 /* Close and Open Report Form */
 const openFormBtn = document.getElementById("openFormButton");
 const closeFormBtn = document.getElementById('closeFormBtn')
-
 
 window.openForm = function() {
     var formContainer = document.getElementById('container');
