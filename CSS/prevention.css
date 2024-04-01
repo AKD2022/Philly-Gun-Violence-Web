@@ -438,7 +438,7 @@ i:hover {
     }
 
     .home, .final {
-        font-size: 70%;
+        font-size: 60%;
     }
 
     .slide .slide1-container, .slide .slide2-container, .slide .slide3-container {
@@ -477,11 +477,11 @@ i:hover {
     }
 }
 
-@media (max-width: 293px) {
+@media (max-width: 296px) {
     .slide .slide1-container, .slide .slide2-container, .slide .slide3-container {
         font-size: 65%;
         padding: 40px;
-        padding-top: 80px;
+        padding-top: 50px;
         padding-bottom: 20px;
     }
 }

@@ -62,7 +62,6 @@ const saveMessages = (location, date, descContent) => {
     });
 
     var tableBody = document.getElementById('incidentTableBody');
-    var newRow = tableBody.insertRow(0); // Insert new row at the top
     var cell1 = newRow.insertCell(0);
     var cell2 = newRow.insertCell(1);
     var cell3 = newRow.insertCell(2);
@@ -78,25 +77,31 @@ const getElementVal = (id) => {
 /* Insert To table */
 var tableBody = document.getElementById('incidentTableBody');
 
-// Listen for any changes in the Firebase database
 incidentFormDB.on('value', function(snapshot) {
-    tableBody.innerHTML = ''; // Clear existing table rows
+    tableBody.innerHTML = ''; 
+    var rows = []; 
+
     snapshot.forEach(function(childSnapshot) {
         var childData = childSnapshot.val();
-        var row = tableBody.insertRow(-1); // Insert a new row at the end
 
-        // Insert cells with data into the row
+        var row = tableBody.insertRow(0);
         var cell1 = row.insertCell(0);
         var cell2 = row.insertCell(1);
         var cell3 = row.insertCell(2);
 
-        // Fill cells with data from Firebase
+
         cell1.innerHTML = childData.location;
         cell2.innerHTML = childData.date;
         cell3.innerHTML = childData.descContent;
+
+        rows.push(row);
     });
 
+    for (var i = rows.length - 1; i >= 0; i--) {
+        tableBody.appendChild(rows[i]);
+    }
 });
+
 
 
 
@@ -122,11 +127,11 @@ window.closeForm = function() {
     formContainer.style.display = 'none';
     openFormBtn.style.display = 'block'
 
-    formContainer.classList.add('fade-out'); // Add the fade-out class
+    formContainer.classList.add('fade-out');
 
     setTimeout(() => {
         formContainer.style.display = 'none';
-        formContainer.classList.remove('fade-out'); // Remove the class after fade-out
+        formContainer.classList.remove('fade-out'); 
     }, 500);
 }
 
