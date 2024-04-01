@@ -16,10 +16,8 @@ firebase.initializeApp(firebaseConfig);
 var incidentFormDB = firebase.database().ref('IncidentForm');
 
 document.getElementById('incidentForm').addEventListener("submit", submitForm);
-
 function submitForm(e) {
     e.preventDefault();
-
     var location = getElementVal('location');
     var date = getElementVal('date');
     var descContent = getElementVal('descContent');
@@ -27,17 +25,14 @@ function submitForm(e) {
     if (location === "") {
         location = "<i>No Location Provided<i>";
     }
-
     if (date === "") {
         date = "<i>No Date Provided<i>";
     } 
-
     if (descContent === "") {
         descContent = "<i>No Description Provided<i>"
     }
 
     // console.log(location, date, descContent);
-
     saveMessages(location, date, descContent);
 
     // Enable Alert

@@ -415,6 +415,11 @@ i:hover {
         font-size: 80%;
         padding-top: 100px;
     }
+
+
+    .home, .final {
+        font-size: 70%;
+    }
 }
 
 @media (max-width: 466px) {
@@ -423,22 +428,21 @@ i:hover {
         padding: 40px;
         padding-top: 200px;
     }
+
+    .home, .final {
+        font-size: 60%;
+    }
 }
 
 @media (max-width: 425px) {
     #expanded-view-1, #expanded-view-2, #expanded-view-3 {
         margin-left: 2.8em;
     }
-
 }
 
 @media (max-width: 375px) {
     #expanded-view-1, #expanded-view-2, #expanded-view-3 {
         margin-left: 2.5em;
-    }
-
-    .home, .final {
-        font-size: 60%;
     }
 
     .slide .slide1-container, .slide .slide2-container, .slide .slide3-container {
