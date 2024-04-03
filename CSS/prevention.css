@@ -24,6 +24,7 @@ body {
     background-color: black;
     overflow-x: hidden;
 	overflow-y: visible;
+    scroll-snap-align: y mandatory;
 }
 
 /* Home */
@@ -301,14 +302,24 @@ i:hover {
 
 /* Final */
 .final {
-    width: 100%;
+    background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    radial-gradient(transparent 30%, black 99%), 
+    url(../images/incidentTransitionbg.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 100vh;
+    overflow-y: hidden;
+    width: 100vw;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 40px;
+	padding: 50px;
+    animation-delay: 1s;
 }
 
 .final h1 {
