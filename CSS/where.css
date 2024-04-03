@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  overflow-y: hide;
+  overflow-y: hidden;
   position: absolute;
   height: unset;
   background: black;
