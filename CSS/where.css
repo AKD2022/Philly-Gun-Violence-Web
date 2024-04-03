@@ -6,9 +6,6 @@
     border: none;
     text-decoration: none;
     transition: all .2s linear;
-	--blue: #4d5ca1;
-    --gray: #46474a;
-    --headerColor: #76b5f0;
 }
 
 *::selection {
@@ -104,8 +101,8 @@ html, body {
 	height: 100vh;
 	display: flex;
 	flex-wrap: nowrap;
-    animation-delay: 0.75s;
-    animation: fade-in 2s;
+    animation-delay: 3s;
+    animation: fade-in 1s;
 }
 
 @keyframes fade-in {
@@ -380,7 +377,7 @@ html, body {
 }
 
 /* Preloader */
-.preloader {
+#preloader {
     position: fixed;
     top: 0;
     left: 0;
@@ -389,6 +386,17 @@ html, body {
     z-index: 1000;
     background: black url("../images/preloader-icon.gif") no-repeat fixed center;
     background-size: 20%;
+}
+
+.removePreloader {
+    animation: vanish 1s forwards;
+}
+
+@keyframes vanish {
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
 }
 
   

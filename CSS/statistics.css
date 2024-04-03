@@ -89,8 +89,8 @@ h1 {
     top: 0;
     padding: 20px;
     align-items: center;
-    animation-delay: 0.75s;
-    animation: fade-in 2s;
+    animation-delay: 3s;
+    animation: fade-in 1s;
 }
 
 @keyframes fade-in {
@@ -186,7 +186,7 @@ h1 {
 }
 
 /* Preloader */
-.preloader {
+#preloader {
     position: fixed;
     top: 0;
     left: 0;
@@ -196,6 +196,18 @@ h1 {
     background: black url("../images/preloader-icon.gif") no-repeat fixed center;
     background-size: 20%;
 }
+
+.removePreloader {
+    animation: vanish 1s forwards;
+}
+
+@keyframes vanish {
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+}
+  
 
 
 /* Media Queries */

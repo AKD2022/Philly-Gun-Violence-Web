@@ -33,6 +33,7 @@ body {
       rgba(0, 0, 0, 0.7),
       rgba(0, 0, 0, 0.7)
     ),
+    radial-gradient(transparent 30%, black 99%), 
     url(../images/first_bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -66,10 +67,6 @@ body {
 
 
 /* Info starts */
-.container {
-    z-index: 1;
-}
-
 .hide {
     opacity: 0;
     transition: 0.5s smooth;
@@ -133,7 +130,17 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background: rgba(113, 115, 118, 0.485);
+    z-index: 1;
+    background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    radial-gradient(transparent 30%, black 99%), 
+    url(../images/prevention-info.jpeg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
 }
 
 /* read more button */
@@ -254,6 +261,7 @@ body {
     padding-top: 250px;
 }
 
+
 @keyframes fade-in {
     0% {
         opacity: 0;
@@ -269,6 +277,7 @@ body {
     text-align: center;
     font-size: 1.2em;
 }
+
 
 h1 {
     padding-bottom: 10px;
@@ -311,7 +320,7 @@ i:hover {
 }
 
 /* Preloader */
-.preloader {
+#preloader {
     position: fixed;
     top: 0;
     left: 0;
@@ -320,6 +329,17 @@ i:hover {
     z-index: 1000;
     background: black url("../images/preloader-icon.gif") no-repeat fixed center;
     background-size: 20%;
+}
+
+.removePreloader {
+    animation: vanish 1s forwards;
+}
+
+@keyframes vanish {
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
 }
 
 

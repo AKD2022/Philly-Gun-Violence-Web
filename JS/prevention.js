@@ -9,33 +9,36 @@ window.addEventListener('scroll', function(e) {
     console.log(scrollY);
 });
 
+var expandedView1 = document.getElementById('expanded-view-1');
+var expandedView2 = document.getElementById('expanded-view-2');
+var expandedView3 = document.getElementById('expanded-view-3');
 /* Expanding button function */
 function expandCause(causeId, event) {
     event.preventDefault();
     event.stopPropagation();
     if (causeId == 'card1') {
-        document.getElementById('expanded-view-1').style.display = 'block';
+        expandedView1.style.display = 'block';
         /* Fade In */
-        document.getElementById('expanded-view-1').style.transition = 'opacity 0.5s';
-        document.getElementById('expanded-view-1').style.opacity = 0; 
-        document.getElementById('expanded-view-1').offsetHeight;
-        document.getElementById('expanded-view-1').style.opacity = 1;
+        expandedView1.style.transition = 'opacity 0.5s';
+        expandedView1.style.opacity = 0; 
+        expandedView1.offsetHeight;
+        expandedView1.style.opacity = 1;
         clicked = "open";
     } else if (causeId == 'card2') {
-        document.getElementById('expanded-view-2').style.display = 'block';
+        expandedView2.style.display = 'block';
         /* Fade In */
-        document.getElementById('expanded-view-2').style.transition = 'opacity 0.5s';
-        document.getElementById('expanded-view-2').style.opacity = 0; 
-        document.getElementById('expanded-view-2').offsetHeight;
-        document.getElementById('expanded-view-2').style.opacity = 1;
+        expandedView2.style.transition = 'opacity 0.5s';
+        expandedView2.style.opacity = 0; 
+        expandedView2.offsetHeight;
+        expandedView2.style.opacity = 1;
         clicked = "open";
     } else if (causeId == 'card3') {
-        document.getElementById('expanded-view-3').style.display = 'block';
+        expandedView3.style.display = 'block';
         /* Fade In */
-        document.getElementById('expanded-view-3').style.transition = 'opacity 0.5s';
-        document.getElementById('expanded-view-3').style.opacity = 0; 
-        document.getElementById('expanded-view-3').offsetHeight;
-        document.getElementById('expanded-view-3').style.opacity = 1;
+        expandedView3.style.transition = 'opacity 0.5s';
+        expandedView3.style.opacity = 0; 
+        expandedView3.offsetHeight;
+        expandedView3.style.opacity = 1;
         clicked = "open";
     }
     hideCards();
@@ -111,3 +114,12 @@ function prevSlide(sliderIndex) {
 sliders.forEach((slider, index) => {
     showSlide(slider);
 });
+
+/* Loading */
+var preloader = document.getElementById("preloader")
+
+window.addEventListener("load", removePreloader);
+
+function removePreloader() {
+  preloader.classList.add("removePreloader");
+}

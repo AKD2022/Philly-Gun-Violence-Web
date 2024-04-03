@@ -117,7 +117,7 @@ h1 {
 }
 
 /* Preloader */
-.preloader {
+#preloader {
     position: fixed;
     top: 0;
     left: 0;
@@ -128,6 +128,17 @@ h1 {
     background-size: 20%;
 }
 
+.removePreloader {
+    animation: vanish 1s forwards;
+}
+
+@keyframes vanish {
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+}
+  
 
 
 /* Media Queries Start */
