@@ -48,10 +48,12 @@ html, body {
       rgba(0, 0, 0, 0.6),
 	  rgba(0, 0, 0, 0.9)
     ),
+	radial-gradient(transparent 30%, black 99.9999999%),
     url(../images/philly-map.jpeg);
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
+
 }
 
 .intro p {
@@ -187,6 +189,71 @@ html, body {
 	font-size: larger;
 }
 
+/* Backgrounds on Sections */
+.overview {
+	background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.6),
+	  rgba(0, 0, 0, 0.9)
+    ),
+	radial-gradient(transparent 30%, black 99%), 
+    url(../images/overview-image.jpeg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+.northPhilly {
+	background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.6),
+	  rgba(0, 0, 0, 0.9)
+    ),
+	radial-gradient(transparent 30%, black 99%), 
+    url(../images/northPhily.webp);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+.southPhilly {
+	background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.6),
+	  rgba(0, 0, 0, 0.9)
+    ),
+	radial-gradient(transparent 30%, black 99%), 
+    url(../images/southPhilly.jpeg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+.westPhilly {
+	background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.6),
+	  rgba(0, 0, 0, 0.9)
+    ),
+	radial-gradient(transparent 30%, black 99%), 
+    url(../images/westPhilly.webp);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+.toNext {
+	background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.6),
+	  rgba(0, 0, 0, 0.9)
+    ),
+	radial-gradient(transparent 30%, black 99%), 
+    url(../images/toNext-Where.webp);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
 
 /* Button Design */
 .button {
