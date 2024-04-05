@@ -231,18 +231,17 @@ h1 {
     }
 }
 
-
-@media (max-width: 827px) {
+@media (max-width: 885px) {
     .age h1, .race h1, .both h1, .bothuf h1 {
-        font-size: 45px;
+        font-size: 42px;
     }
 
     .age p, .race p, .both p, .bothuf p {
-        font-size: 25px;
+        font-size: 19px;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 823px) {
     .first h1{
         font-size: 2.5em;
     }
@@ -308,11 +307,11 @@ h1 {
 
 @media (max-width: 450px) {
     .age h1, .race h1, .both h1,  .bothuf h1 { 
-        font-size: 40px;
+        font-size: 38px;
     }
 
     .age p, .race p, .both p, .bothuf p {
-        font-size: 18px;
+        font-size: 15px;
     }
 
     .description {
@@ -329,9 +328,6 @@ h1 {
         height: 120vh;
     }
 
-    .bc {
-        transform: translateY(10em);
-    }
 
     .both .description {
         font-size: 16px;
@@ -356,7 +352,7 @@ h1 {
     }
 }
 
-@media (max-width: 334px) {
+@media (max-width: 350px) {
     .age h1, .race h1, .both h1, .bothuf h1 {
         font-size: 35px;
     }
@@ -367,19 +363,16 @@ h1 {
 
 }
 
-@media (max-width: 310px) {
-    .chart-parent {
-        transform: translateY(5em);
+@media (max-width: 325px) {    
+    .age h1, .race h1, .both h1, .bothuf h1 {
+        font-size: 30px;
+    }
+
+    .age p, .race p, .both p, .bothuf p {
+        font-size: 12px;
     }
 
     .bt {
-        width: 100vw;
-        height: 100vh;
-        transform: translateY(-3em);
-    }
-
-    .bc {
-        transform: translateY(10em);
         width: 100vw;
         height: 100vh;
     }
@@ -394,9 +387,13 @@ h1 {
     }
 }
 
-@media (max-width: 279px) {
-    body {
-        font-size: 85%;
+@media (max-width: 272px) {
+    .age h1, .race h1, .both h1, .bothuf h1 {
+        font-size: 25px;
+    }
+
+    .age p, .race p, .both p, .bothuf p {
+        font-size: 10px;
     }
 }
 /* Change flex-direction to column from 768px */

@@ -24,6 +24,11 @@ body {
   background: black;
 }
 
+p a {
+	color: gray;
+	text-decoration: underline;
+}
+
 html, body {
   overflow-x: hidden;
   margin: 0;
@@ -473,12 +478,40 @@ html, body {
 		height: 25em !important;
 		width: 35em !important;
 	}
+	
+	.animate {
+		transform: translateY(0em);
+	}
+
+	@keyframes animate {
+		0% {
+			opacity: 1;
+		}
+	
+		75% {
+			opacity: 0;
+			transform: translateY(1em);
+		}
+	
+		99% {
+			opacity: 0;
+			transform: translateY(0em);
+		}
+	
+		100% {
+			opacity: 1;
+		}
+	}
 }
 
 @media (max-width: 437px) {
 	#northMap.visible, #southMap.visible, #westMap.visible {
 		height: 25em !important;
 		width: 28em !important;
+	}
+
+	.description {
+		font-size: 95%;
 	}
 }
 
@@ -505,5 +538,11 @@ html, body {
 @media (max-width: 343px) {
 	.overview, .firstContainer, .toNext {
 		font-size: 70%;
+	}
+}
+
+@media (max-width: 310px) {
+	.map-text, .summary {
+		font-size: 75%;
 	}
 }

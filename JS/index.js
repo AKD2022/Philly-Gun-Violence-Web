@@ -49,11 +49,9 @@ document.addEventListener("DOMContentLoaded", function() {
 /* Loading */
 var preloader = document.getElementById("preloader")
 
-window.addEventListener("load", removePreloader);
+window.addEventListener("load", removePreloader); 
 
 function removePreloader() {
-  preloader.classList.add("removePreloader");
+    preloader.classList.add("removePreloader");
+    runAnimations();
 }
-
-
-
