@@ -21,6 +21,7 @@ function submitForm(e) {
     var location = getElementVal('location');
     var date = getElementVal('date');
     var descContent = getElementVal('descContent');
+    var sectionPhilly  = getElementVal('section');
 
     if (location === "") {
         location = "<i>No Location Provided<i>";
@@ -31,9 +32,12 @@ function submitForm(e) {
     if (descContent === "") {
         descContent = "<i>No Description Provided<i>"
     }
+    if (sectionPhilly === "") {
+        sectionPhilly = "<i>No Description Provided<i>"
+    }
 
     // console.log(location, date, descContent);
-    saveMessages(location, date, descContent);
+    saveMessages(location, date, descContent, sectionPhilly);
 
     // Enable Alert
     document.querySelector('.alert').style.display = 'block';
@@ -47,21 +51,24 @@ function submitForm(e) {
 
 }
 
-const saveMessages = (location, date, descContent) => {
+const saveMessages = (location, date, descContent, sectionPhilly) => {
     var newIncidentForm = incidentFormDB.push();
     newIncidentForm.set({
         location : location,
         date : date,
         descContent : descContent,
+        sectionPhilly : sectionPhilly,
     });
 
     var tableBody = document.getElementById('incidentTableBody');
     var cell1 = newRow.insertCell(0);
     var cell2 = newRow.insertCell(1);
     var cell3 = newRow.insertCell(2);
+    var cell4 = newRow.insertCell(3);
     cell1.innerHTML = location;
     cell2.innerHTML = date;
     cell3.innerHTML = descContent;
+    cell4.innerHTML = sectionPhilly;
 };
 
 const getElementVal = (id) => {
@@ -82,10 +89,12 @@ incidentFormDB.on('value', function(snapshot) {
         var cell1 = row.insertCell(0);
         var cell2 = row.insertCell(1);
         var cell3 = row.insertCell(2);
+        var cell4 = row.insertCell(3);
 
         cell1.innerHTML = childData.location;
         cell2.innerHTML = childData.date;
         cell3.innerHTML = childData.descContent;
+        cell4.innerHTML = childData.sectionPhilly;
 
         rows.push(row);
     });
