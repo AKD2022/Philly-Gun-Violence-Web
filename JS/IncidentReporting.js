@@ -21,17 +21,20 @@ function submitForm(e) {
     var location = getElementVal('location');
     var date = getElementVal('date');
     var descContent = getElementVal('descContent');
-    var sectionPhilly  = getElementVal('section');
+    var sectionPhilly  = getElementVal('sectionPhilly');
 
     if (location === "") {
         location = "<i>No Location Provided<i>";
     }
+
     if (date === "") {
         date = "<i>No Date Provided<i>";
     } 
+
     if (descContent === "") {
         descContent = "<i>No Description Provided<i>"
     }
+
     if (sectionPhilly === "") {
         sectionPhilly = "<i>No Description Provided<i>"
     }
@@ -54,13 +57,15 @@ function submitForm(e) {
 const saveMessages = (location, date, descContent, sectionPhilly) => {
     var newIncidentForm = incidentFormDB.push();
     newIncidentForm.set({
-        location : location,
-        date : date,
-        descContent : descContent,
-        sectionPhilly : sectionPhilly,
+        location: location,
+        date: date,
+        descContent: descContent,
+        sectionPhilly: sectionPhilly,
     });
 
     var tableBody = document.getElementById('incidentTableBody');
+    var newRow = tableBody.insertRow(0); // Create a new row
+
     var cell1 = newRow.insertCell(0);
     var cell2 = newRow.insertCell(1);
     var cell3 = newRow.insertCell(2);
@@ -70,6 +75,7 @@ const saveMessages = (location, date, descContent, sectionPhilly) => {
     cell3.innerHTML = descContent;
     cell4.innerHTML = sectionPhilly;
 };
+
 
 const getElementVal = (id) => {
     return document.getElementById(id).value;
