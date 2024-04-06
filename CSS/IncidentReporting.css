@@ -224,14 +224,14 @@ th, td {
 
 /* Media Queries */
 @media (max-width: 615px) {
-    table {
-        font-size: 20px;
+    body {
+        font-size: 80%;
     }
 }
 
 @media (max-width: 474px) {
-    table {
-        font-size: 15px;
+    body {
+        font-size: 70%
     }
 }
 
