@@ -54,6 +54,37 @@ h1 {
     padding-bottom: 20px;
 }
 
+/* Steps */
+.steps-container {
+    background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+	radial-gradient(transparent 30%, black 99%), 
+    url(../images/calltoactionsectionbg.webp);
+    background-size: cover;
+    background-repeat: none;
+    height: 100vh;
+    width: 100vw;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    align-items: left;
+    justify-content: center;
+    text-align: left;
+}
+
+h1 {
+   font-size: 3.2em;
+}
+
+a {
+    color: gray;
+}
+
+
 /* To Next */
 .final {
     background-image: 
@@ -104,6 +135,39 @@ h1 {
     100% {
       opacity: 0;
       visibility: hidden;
+    }
+}
+
+/* Media Queries */
+@media (max-width: 617px) {
+    .final {
+        font-size: 90%;
+    }
+}
+
+@media (max-width: 509px) {
+    .final {
+        font-size: 70%;
+    }
+}
+
+@media (max-width: 466px) {
+    .final {
+        font-size: 60%;
+    }
+
+    .steps-container {
+        font-size: 85%;
+    }
+}
+
+@media (max-width: 308px) {
+    .steps-container {
+        font-size: 75%;
+    }
+
+    .final {
+        font-size: 55%;
     }
 }
 
