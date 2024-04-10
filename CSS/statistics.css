@@ -22,6 +22,11 @@ body {
     overflow-x: hidden;
 }
 
+a {
+    color: gray;
+    text-decoration: underline;
+}
+
 /* Content in Slideshows */
 
 .chart-parent {
