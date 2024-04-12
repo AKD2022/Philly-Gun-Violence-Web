@@ -33,6 +33,8 @@ body {
     url(../images/incidentReportingbg.jpeg);
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 #container {
@@ -139,6 +141,7 @@ body {
     max-height: 600px;
     overflow-y: auto;
     padding: 30px;
+    display: flex;
 }
 
 table {
@@ -192,11 +195,10 @@ th, td {
     color: #fff;
 }
 
-#openFormButton {
-    bottom: 0%;
-    right: 0%;
-    position: fixed;
-    margin: 30px;
+.btnContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Preloader */
@@ -223,27 +225,53 @@ th, td {
 }
 
 /* Media Queries */
-@media (max-width: 615px) {
-    body {
-        font-size: 80%;
-    }
-}
-
-@media (max-width: 474px) {
-    body {
-        font-size: 70%
-    }
-}
-
-@media (max-width: 404px) {
+@media (max-width: 768px) {
     table {
+        font-size: 15px;
+        width: 300px;
+    }
+    
+    .container {
+        overflow-x: none;
+    }
+}
+
+@media (max-width: 500px) {
+    table {
+        font-size: 12px;
+        width: 200px;
+    }
+    
+    th {
+        font-size: 120%;
+    }
+
+    #openFormButton {
         font-size: 12px;
     }
 }
 
-@media (max-width: 361px) {
+@media (max-width: 459px) {
     table {
         font-size: 10px;
+        padding: 10px;
     }
 }
 
+@media (max-width: 380px) {
+    table {
+        font-size: 8px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 340px) {
+    table {
+        font-size: 6px;
+        padding: .1px;
+    }
+
+    th {
+        font-size: 150%;
+    }
+}

@@ -152,5 +152,3 @@ function removePreloader() {
   preloader.classList.add("removePreloader");
 }
 
-
-

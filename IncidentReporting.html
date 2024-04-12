@@ -61,7 +61,9 @@
             <div class="inputBox">
                 <button type="submit">Submit</button>
             </div>
-            <a class="btn" id="closeFormBtn" onclick="closeForm()">Close</a>
+            <div class="btnContainer">
+                <a class="btn" id="closeFormBtn" onclick="closeForm()">Close</a>
+            </div>
         </form>
     </div>
 
@@ -70,11 +72,12 @@
             <thead>
                 <tr>
                     <th>Location</th>
+                    <th>Section Of Philly</th>
                     <th>Date</th>
                     <th>Description</th>
-                    <th>Section of Philly</th>
                 </tr>
             </thead>
+            
             <tbody id="incidentTableBody">
                 <!-- Table rows will be inserted here based on the info -->
             </tbody>
