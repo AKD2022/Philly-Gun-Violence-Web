@@ -196,8 +196,6 @@ const config = {
 };
 
 
-
-
 // render init block
 const myChart = new Chart(
   document.getElementById('chart'),

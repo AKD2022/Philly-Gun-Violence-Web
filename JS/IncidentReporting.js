@@ -48,6 +48,7 @@ function submitForm(e) {
     // Remove Alert & Reset Form
     setTimeout(() => {
         document.querySelector('.alert').style.display = 'none';
+        window.location.reload(true);
     }, 2500);   
 
     document.getElementById("incidentForm").reset();
@@ -115,7 +116,8 @@ incidentFormDB.on('value', function(snapshot) {
 
 /* Close and Open Report Form */
 const openFormBtn = document.getElementById("openFormButton");
-const closeFormBtn = document.getElementById('closeFormBtn')
+const closeFormBtn = document.getElementById('closeFormBtn');
+const table = document.getElementById("tableContainer");
 
 window.openForm = function() {
     var formContainer = document.getElementById('container');
@@ -126,6 +128,8 @@ window.openForm = function() {
     formContainer.style.opacity = 0; 
     formContainer.offsetHeight;
     formContainer.style.opacity = 1;
+
+    table.classList.add('disappear');
 
 }
 
@@ -140,6 +144,9 @@ window.closeForm = function() {
         formContainer.style.display = 'none';
         formContainer.classList.remove('fade-out'); 
     }, 500);
+
+    table.classList.remove('disappear');
+
 }
 
 
