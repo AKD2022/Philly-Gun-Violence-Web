@@ -73,7 +73,7 @@ html, body {
 	font-size: 5em;
 	animation: animate 2s ease-in infinite;
 	opacity: 1;
-	transform: translateY(3em);
+	transform: translateY(1em);
 }
 
 
@@ -84,12 +84,12 @@ html, body {
 
 	75% {
 		opacity: 0;
-		transform: translateY(4em);
+		transform: translateY(2em);
 	}
 
 	99% {
 		opacity: 0;
-		transform: translateY(3em);
+		transform: translateY(1em);
 	}
 
 	100% {
@@ -302,8 +302,8 @@ html, body {
 	float: left;
 	opacity: 1;
 	animation: opacityOpen 0.5s;
-	height: 35em !important;
-	width: 55em !important;
+	height: 30em !important;
+	width: 50em !important;
 	margin-right: 10px;
 	border-radius: 50px;
 }
@@ -339,8 +339,8 @@ html, body {
 	float: left;
 	opacity: 1;
 	animation: opacityOpen 0.5s;
-	height: 35em !important;
-	width: 55em !important;
+	height: 30em !important;
+	width: 50em !important;
 	margin-right: 10px;
 	border-radius: 50px;
 }
@@ -355,8 +355,8 @@ html, body {
 	float: left;
 	opacity: 1;
 	animation: opacityOpen 0.5s;
-	height: 35em !important;
-	width: 55em !important;
+	height: 30em !important;
+	width: 50em !important;
 	margin-right: 10px;
 	border-radius: 50px;
 }
@@ -466,6 +466,12 @@ html, body {
 	}
 }
 
+@media (max-width: 535px) {
+	#northMap.visible, #southMap.visible, #westMap.visible {
+		height: 25em !important;
+		width: 35em !important;
+	}
+}	
 
 
 @media (max-width: 500px) {
@@ -503,7 +509,7 @@ html, body {
 	}
 }
 
-@media (max-width: 437px) {
+@media (max-width: 442px) {
 	#northMap.visible, #southMap.visible, #westMap.visible {
 		height: 25em !important;
 		width: 28em !important;
@@ -545,3 +551,4 @@ html, body {
 		font-size: 75%;
 	}
 }
+
