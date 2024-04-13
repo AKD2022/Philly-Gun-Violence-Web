@@ -197,3 +197,8 @@ body {
 .btn:hover{
     color: #fff;
 }
+
+::-webkit-scrollbar {
+	width: 0;
+	height: 0;
+}
