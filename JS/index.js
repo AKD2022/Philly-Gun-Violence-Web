@@ -49,4 +49,4 @@ document.addEventListener("DOMContentLoaded", function() {
 /* Loading */
 setTimeout(function() {
     $('#preloader').fadeToggle();
-}, 500);
+}, 400);
