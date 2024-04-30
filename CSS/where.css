@@ -1,0 +1,554 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+*::selection {
+    color: black;
+}
+
+html {
+  overflow-x: scroll;
+  height: 100%;
+}
+
+body {
+  overflow-y: hidden;
+  position: absolute;
+  height: unset;
+  background: black;
+}
+
+p a {
+	color: gray;
+	text-decoration: underline;
+}
+
+html, body {
+  overflow-x: hidden;
+  margin: 0;
+}
+
+/* Intro Starts */
+.intro {
+	color: white;
+	height: 100vh;
+	width: 100vw;
+	padding: 50px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.6),
+	  rgba(0, 0, 0, 0.9)
+    ),
+	radial-gradient(transparent 30%, black 99.9999999%),
+    url(../images/philly-map.jpeg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+
+}
+
+.intro p {
+	font-size: 1.5em;
+	padding: 20px;
+}
+
+.intro h1 {
+	font-size: 3em;
+}
+
+
+.animate {
+	color: white;
+	font-size: 5em;
+	animation: animate 2s ease-in infinite;
+	opacity: 1;
+	transform: translateY(1em);
+}
+
+
+@keyframes animate {
+	0% {
+		opacity: 1;
+	}
+
+	75% {
+		opacity: 0;
+		transform: translateY(2em);
+	}
+
+	99% {
+		opacity: 0;
+		transform: translateY(1em);
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+/* Intro Ends */
+
+/* Info Starts */
+
+.container {
+	width: 600%;
+	height: 100vh;
+	display: flex;
+	flex-wrap: nowrap;
+    animation-delay: 3s;
+    animation: fade-in 1s;
+}
+
+@keyframes fade-in {
+    0%, 50% {
+        opacity: 0;
+    } 100% {
+        opacity: 1;
+    }
+}
+
+
+.panel {
+	width: 100vw;
+}
+
+::-webkit-scrollbar {
+	width: 0%;
+	height: 0%;
+}
+
+/* Overview of the Maps */
+.overview {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	overflow-x: hidden;
+	padding: 50px;
+	top: 0;
+}
+
+.overview-header {
+	padding: 20px;
+	font-size: 3.2em;
+}
+
+.overview-intro p {
+	font-size: 1.5em;
+}
+
+/* Indicator and Arrow */
+.indication {
+	bottom: 0%;
+	right: 0%;
+	position: fixed;
+	padding: 30px;
+}
+
+.indication i {
+	font-size: 45px;
+	padding-right: 2px;
+}
+
+.indication p {
+	font-size: 20px;
+}
+
+/* General Text on Sections */
+.northPhilly, .southPhilly, .westPhilly {
+	align-items: left;
+	text-align: left;
+	justify-content: left;
+	padding: 30px;
+}
+
+.northPhilly h1, .southPhilly h1, .westPhilly h1 {
+	font-size: 3.2em;
+	padding-top: 2em;
+}
+
+.northPhilly .dp, .southPhilly .dp, .westPhilly .dp {
+	font-size: 1.2em;
+}
+
+.summary {
+	padding-top: 20px;
+}
+
+.map-text {
+	font-size: larger;
+}
+
+/* Backgrounds on Sections */
+.overview {
+	background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.6),
+	  rgba(0, 0, 0, 0.9)
+    ),
+	radial-gradient(transparent 30%, black 99%), 
+    url(../images/overview-image.jpeg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+.northPhilly {
+	background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.6),
+	  rgba(0, 0, 0, 0.9)
+    ),
+	radial-gradient(transparent 30%, black 99%), 
+    url(../images/northPhily.webp);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+.southPhilly {
+	background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.6),
+	  rgba(0, 0, 0, 0.9)
+    ),
+	radial-gradient(transparent 30%, black 99%), 
+    url(../images/southPhilly.jpeg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+.westPhilly {
+	background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.6),
+	  rgba(0, 0, 0, 0.9)
+    ),
+	radial-gradient(transparent 30%, black 99%), 
+    url(../images/westPhilly.webp);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+.toNext {
+	background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.6),
+	  rgba(0, 0, 0, 0.9)
+    ),
+	radial-gradient(transparent 30%, black 99%), 
+    url(../images/toNext-Where.webp);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+/* Button Design */
+.button {
+    padding: 10px;
+    border: 2px solid gray;
+    color: gray;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 40px;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    margin-top: 1rem;
+    margin-bottom: 10px;
+	background-color: transparent;
+}
+
+.button::before{
+    content: ' ';
+    position: absolute;
+    top: 0; right: 0;
+    width: 0%;
+    height: 100%;
+    background: gray;
+    transition: .3s linear;
+    z-index: -1;
+}
+
+.button:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+.button:hover{
+    color: #fff;
+}
+
+/* North Philly Map Start */
+#northMap.hidden{
+	display: none !important;
+}
+
+#northMap.visible {
+	float: left;
+	opacity: 1;
+	animation: opacityOpen 0.5s;
+	height: 30em !important;
+	width: 50em !important;
+	margin-right: 10px;
+	border-radius: 50px;
+}
+
+/* North Philly Map End */
+
+@keyframes opacityOpen {
+	0% {
+		opacity: 0;
+	} 100% {
+		opacity: 1;
+	}
+}
+
+#closeMapNorth {
+	display: none;
+}
+
+#closeMapSouth {
+	display: none;
+}
+
+#closeMapWest {
+	display: none;
+}
+
+/* South Philly Map Start */
+#southMap.hidden{
+	display: none !important;
+}
+
+#southMap.visible {
+	float: left;
+	opacity: 1;
+	animation: opacityOpen 0.5s;
+	height: 30em !important;
+	width: 50em !important;
+	margin-right: 10px;
+	border-radius: 50px;
+}
+/* South Philly Map End */
+
+/* West Philly Map */
+#westMap.hidden{
+	display: none !important;
+}
+
+#westMap.visible {
+	float: left;
+	opacity: 1;
+	animation: opacityOpen 0.5s;
+	height: 30em !important;
+	width: 50em !important;
+	margin-right: 10px;
+	border-radius: 50px;
+}
+/* West Philly Map End */
+
+/* To Next */
+.toNext {
+	display: flex;
+	padding: 50px;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+}
+
+.toNext h1 {
+	font-size: 3.2em;
+	padding-bottom: 10px;
+}
+
+.toNext p {
+	font-size: 1.2em;
+}
+
+/* Preloader */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1000;
+    background: black url("../images/preloader-icon.gif") no-repeat fixed center;
+    background-size: 20%;
+}
+
+.removePreloader {
+    animation: vanish 1s forwards;
+}
+
+@keyframes vanish {
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+}
+  
+/* Media Queries */
+
+@media (max-width: 981px) {
+	#northMap.visible, #southMap.visible, #westMap.visible {
+		height: 30em !important;
+		width: 44em !important;
+	}
+
+	.overview, .firstContainer, .toNext {
+		font-size: 90%;
+	}
+
+	.northPhilly h1, .southPhilly h1, .westPhilly h1 {
+		font-size: 3.2em;
+		padding-top: 2em;
+	}
+	
+}
+
+@media (max-width: 768px) {
+	#northMap.visible, #southMap.visible, #westMap.visible {
+		float: none;
+	}
+
+	.map-text {
+		margin-top: 10px;
+	}
+
+	.overview, .firstContainer, .toNext {
+		font-size: 80%;
+	}
+
+	.northPhilly .dp {
+		font-size: 1em;
+	}
+
+	.southPhilly .dp {
+		font-size: 1em;
+	}
+
+	.westPhilly .dp {
+		font-size: 1em;
+	}
+
+	.indication i {
+		font-size: 30px;
+	}
+	
+	.indication p {
+		font-size: 15px;
+	}
+
+	.northPhilly h1, .southPhilly h1, .westPhilly h1 {
+		font-size: 3em;
+		padding-top: 1em;
+	}
+
+	.map-text, .summary {
+		font-size: 90%;
+	}
+}
+
+@media (max-width: 535px) {
+	#northMap.visible, #southMap.visible, #westMap.visible {
+		height: 25em !important;
+		width: 35em !important;
+	}
+}	
+
+
+@media (max-width: 500px) {
+	.overview, .firstContainer, .toNext {
+		font-size: 75%;
+	}
+
+	#northMap.visible, #southMap.visible, #westMap.visible {
+		height: 25em !important;
+		width: 35em !important;
+	}
+	
+	.animate {
+		transform: translateY(0em);
+	}
+
+	@keyframes animate {
+		0% {
+			opacity: 1;
+		}
+	
+		75% {
+			opacity: 0;
+			transform: translateY(1em);
+		}
+	
+		99% {
+			opacity: 0;
+			transform: translateY(0em);
+		}
+	
+		100% {
+			opacity: 1;
+		}
+	}
+}
+
+@media (max-width: 442px) {
+	#northMap.visible, #southMap.visible, #westMap.visible {
+		height: 25em !important;
+		width: 28em !important;
+	}
+
+	.description {
+		font-size: 95%;
+	}
+}
+
+@media (max-width: 375px) {
+	.indication i {
+		font-size: 25px;
+	}
+	
+	.indication p {
+		font-size: 12px;
+	}
+
+	.northPhilly h1, .southPhilly h1, .westPhilly h1 {
+		font-size: 2em;
+		padding-top: 1em;
+	}
+
+	#northMap.visible, #southMap.visible, #westMap.visible {
+		height: 20em !important;
+		width: 20em !important;
+	}
+}
+
+@media (max-width: 343px) {
+	.overview, .firstContainer, .toNext {
+		font-size: 70%;
+	}
+}
+
+@media (max-width: 310px) {
+	.map-text, .summary {
+		font-size: 75%;
+	}
+}
+

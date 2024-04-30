@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--CSS Files-->
+    <link rel="stylesheet" href="CSS/prevention.css">
+    <link rel="stylesheet" href="CSS/generals.css">
+
+     <!--GSAP Scrolltrigger Imports-->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!--Font-Awesome Imports-->
+    <script src="https://kit.fontawesome.com/4d72ef9868.js" crossorigin="anonymous"></script>
+
+    <!--Website Icon-->
+    <link rel="icon" href="images/Website-logo.png">
+
+    <!--Title-->
+    <title>Prevention</title>
+    
+</head>
+<body>
+        
+    <!--Hamburger Menu Starts-->
+
+    <div class="menu-wrap">
+      <input type="checkbox" class="toggler">
+      <div class="hamburger">
+          <div></div>
+      </div>
+      <div class="menu">
+          <div>
+              <div>
+                  <ul>
+                      <li><a href="index.html">Home</a></li>
+                      <li><a href="statistics.html" >Statistics - Numbers</a></li>
+                      <li><a href="where.html">Statistics - Location</a></li>
+                      <li><a href="prevention.html"  style="border-bottom-width: 5px; border-bottom-style: solid;">Prevention</a></li>
+                      <li><a href="CallToAction.html">Call To Action</a></li>
+                      <li><a href="IncidentReporting.html">Incident Reporting</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+
+    <!--Preloader-->
+    <div id="preloader"></div>
+
+    <!--Slide Show starts-->
+    <section class="home">
+      <div>
+        <h1>Prevention</h1>
+        <p>Now that you know how much and where gun violence happens, its time to take action. We need to figure out how 
+          to prevent it from happening. But before we are able to find out how to stop it, we need to find the main causes
+          of it. There are a plethora of different causes, but below, I have divided them into three main categories. From 
+          there, we will dive in to the prevention step, and find ways to prevent the violence from happening. </p>
+       </div>   
+    </section>
+
+    
+   <!--Info Starts-->
+  <div class="container">
+
+    <!--Cause One-->
+    <div class="card card-1" onclick="expandCause('card1')">
+      <div class="content">
+        <h2>Poverty & Economic Inequality</h2>
+        <button class="readMore" onclick="expandCause('card1', event)">Read More</button>
+      </div>
+    </div>
+
+    <div id="expanded-view-1">
+      <div class="slider">
+
+        <!--Slide 1-->
+        <div class="slide">
+          <div class="slide1-container">
+            <div class="text">
+              <h1>Cause #1: Poverty & Economic Inequality</h1>
+              <p>Poverty is a big cause of gun violence. Almost 25% of people in Philadelphia live in poverty, leading to
+                hopelessness and desperation. Poverty often restricts individuals access to employment. This creates
+                an open area for high stress and this could lead to desperation. Poverty also means a lack of resources
+                and affordable healthcare. Without these resources, people could feel marginalized or disconnected
+                from the rest of society, leading to social unrest and/or illegal activites. 
+              </p>
+              <p class="indicator">1/2</p>
+            </div>
+          </div>
+        </div>
+
+        <!--Slide 2-->
+        <div class="slide">
+          <div class="slide1-container">
+            <h1>Ways to Prevent:</h1>
+            <p>
+              Preventing poverty in Philadelphia requires more than one solution. Investing in education 
+              and training for work can help people get jobs and reduce the unemployment rate. Another way 
+              to prevent poverty is by implementing policies that promote affordable housing and healthcare
+              access can alleviate financial burdens on low-income families. Furthermore, supporting small 
+              businesses and promoting economic development in underserved communities can create job opportunities
+              and help stimulate local economies. Finally, there are already many foundations that are trying
+              to help reduce poverty rates in Philly like:</p>
+              <p><a href="https://thepromisephl.org/">The Promise</a>, &nbsp;<a href="https://unitedforimpact.org/ways-to-support/"> United Way</a>, and&nbsp;<a href="https://svpphl.org/"> SVP Philadlephia </a></p>
+            <p class="indicator">2/2</p>
+            <button class="close-button" onclick="closeExpandedView()">Close</button>
+          </div>
+        </div>
+      </div>
+
+      <!--Arrows-->
+      <div class="arrows left">
+        <i class="fa-solid fa-angle-left" onclick="prevSlide(0)"></i>
+      </div>
+      <div class="arrows right">
+        <i class="fa-solid fa-angle-right" onclick="nextSlide(0)"></i>
+      </div>
+    </div>
+    
+
+    <!--Cause Two-->
+    <div class="card card-2" onclick="expandCause('card2')">
+      <div class="content">
+        <h2>Gang Activities & Drug Trade</h2>
+        <button class="readMore" onclick="expandCause('card2', event)">Read More</button>
+      </div>
+    </div>
+
+    <div id="expanded-view-2">
+      <div class="slider">
+
+        <!--Slide 1-->
+        <div class="slide">
+          <div class="slide2-container">
+            <h1>Cause #2: Gang Activities & Drug Trade</h1>
+            <p>
+              Preventing gang violence and drug trafficking in Philadelphia necessitates targeted strategies. 
+              Investing in education and vocational training provides alternatives to illicit activities. 
+              Strengthening community policing fosters trust and disrupts gang operations. Implementing economic 
+              development initiatives in high-risk areas reduces gang influence and provides opportunities for 
+              at-risk youth. Supporting rehabilitation programs for gang members and enhancing collaboration between
+              law enforcement and community organizations are crucial for breaking the cycle of violence.
+            </p>
+            <p class="indicator">1/2</p>
+          </div>
+        </div>
+
+        <!--Slide 2-->
+        <div class="slide">
+          <div class="slide2-container">
+            <h1>Ways to prevent: </h1>
+            <p>
+              Targeted interventions addressing root causes are imperative to prevent Gang Violence and Drug Trafficking.
+              Investing in education and job training programs provides alternatives to illegal activities.
+              Strengthening community policing efforts disrupts gang operations and fosters trust. Implementing economic
+              development initiatives in underserved areas reduces gang influence and enhances opportunities. Additionally,
+              supporting rehabilitation programs for gang members and enhancing collaboration between law enforcement and 
+              community organizations are vital for breaking the cycle of violence and poverty.</p>
+            <p class="indicator">2/2</p>
+            <button class="close-button" onclick="closeExpandedView()">Close</button>
+          </div>
+        </div>
+      </div>
+
+      <!--Arrows-->
+      <div class="arrows left">
+        <i class="fa-solid fa-angle-left" onclick="prevSlide(1)"></i>
+      </div>
+      <div class="arrows right">
+        <i class="fa-solid fa-angle-right" onclick="nextSlide(1)"></i>
+      </div>
+    </div>
+
+    <!--Cause Three-->
+    <div class="card card-3" onclick="expandCause('card3')">
+      <div class="content">
+        <h2>Easy Access to Firearms</h2>
+        <button class="readMore" onclick="expandCause('card3', event)">Read More</button>
+      </div>
+    </div>
+
+    <div id="expanded-view-3">
+      <div class="slider">
+
+        <!--Slide 1-->
+        <div class="slide">
+          <div class="slide3-container">
+            <h1>Cause #3: Easy Access to Firearms</h1>
+            <p>
+              Easy access to firearms in Philadelphia contributes significantly to the city's gun violence problem. 
+              Despite strict gun control laws, illegal firearms flow into the city through various channels, including
+              straw purchases, theft, and trafficking from neighboring states with lenient regulations. The rapid increase
+              of the number of guns increases the likelihood of violence and escalates conflicts, making the challenges 
+              faced by communities already grappling with socioeconomic disparities and other systemic issues even worse. 
+            </p>
+            <p class="indicator">1/2</p>
+          </div>
+        </div>
+
+        <!--Slide 2-->
+        <div class="slide">
+          <div class="slide3-container">
+            <h1>Ways to Prevent: </h1>
+            <p>Preventing the ease of access to firearms in Philadelphia needs more than one solution. Strengthening
+              background checks and licensing requirements can prevent illegal ownership of deadly firearms. Enhanced 
+              enforcement against illegal gun trafficking and unlicensed dealers is crucial. Implementing community buyback
+              programs and promoting safe storage practices can reduce the availability of firearms. Additionally, public 
+              awareness campaigns on responsible gun ownership and advocacy for stricter federal regulations contribute to 
+              mitigating the flow of firearms into the city.</p>
+            <p class="indicator">2/2</p>
+            <button class="close-button" onclick="closeExpandedView()">Close</button>
+          </div>
+        </div>
+      </div>
+
+      <!--Arrows-->
+      <div class="arrows left">
+        <i class="fa-solid fa-angle-left" onclick="prevSlide(2)"></i>
+      </div>
+      <div class="arrows right">
+        <i class="fa-solid fa-angle-right" onclick="nextSlide(2)"></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="final">
+    <div class="final-container">
+      <h1>Call to Action</h1>
+      <p>
+        Now that we know the main causes of gun violence and how to prevent it, we need to take action.
+      </p>
+      <a href="CallToAction.html" class="btn">Call To Action</a>
+    </div>
+  </div>
+
+    
+    <script src="JS/prevention.js"></script>
+</body>
+</html>

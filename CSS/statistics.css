@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: black;
+    overflow-x: hidden;
+}
+
+a {
+    color: gray;
+    text-decoration: underline;
+}
+
+/* Content in Slideshows */
+
+.chart-parent {
+    display: flex;
+    height: 60vh;
+    width: 60vw;
+}
+
+.header {
+    font-size: 2em;
+    text-align: left;
+    padding-left: 30px;
+}
+
+.info {
+    padding: 30px;
+    font-size: 25px;
+}
+
+#lineChart, #chart, #myChart, #myChart2 {
+    background: black;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+.first {
+    background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url(../images/first_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    overflow-y: hidden;
+    width: 100vh;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.first h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 3em;
+}
+
+.first p {
+    font-size: 1.5em;
+    text-align: center;
+    width: 100%;
+}
+
+h1 {
+    padding-bottom: 10px;
+}
+
+.panel {
+    height: 100vh;
+    width: 100vw;
+    position: sticky;
+    top: 0;
+    padding: 20px;
+    align-items: center;
+    animation-delay: 3s;
+    animation: fade-in 1s;
+}
+
+@keyframes fade-in {
+    0%, 50% {
+        opacity: 0;
+    } 100% {
+        opacity: 1;
+    }
+}
+
+.age {
+    background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url(../images/age_bg.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.description {
+    padding: 20px;
+}
+
+.race {
+    background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(../images/race_bg.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.both {
+    background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(../images/both_bg.webp);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.bothuf {
+    background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(../images/bothuf_bg.jpeg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.next {
+    background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(../images/next_bg.jpeg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px;
+}
+
+.next h1 {
+    font-size: 3em;
+}
+
+.next p {
+    font-size: 1.5em;
+}
+
+.bc {
+    padding-top: 50px;
+}
+
+/* Preloader */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1000;
+    background: black url("../images/preloader-icon.gif") no-repeat fixed center;
+    background-size: 20%;
+}
+
+.removePreloader {
+    animation: vanish 1s forwards;
+}
+
+@keyframes vanish {
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+}
+  
+
+
+/* Media Queries */
+@media (max-width: 1125px) {
+    .bc {
+        padding-top: 90px;
+    }
+}
+
+@media (max-width: 1024px) {
+    body {
+        font-size: 80%;
+    }
+
+    .bc {
+        padding-top: 100px;
+    }
+
+    .bt {
+        padding-left: 20px;
+    }
+}
+
+@media (max-width: 885px) {
+    .age h1, .race h1, .both h1, .bothuf h1 {
+        font-size: 42px;
+    }
+
+    .age p, .race p, .both p, .bothuf p {
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 823px) {
+    .first h1{
+        font-size: 2.5em;
+    }
+
+    .first p {
+        font-size: 1.3em;
+    }
+
+    .age h1, .race h1, .both h1,  .bothuf h1 {
+        font-size: 40px;
+    }
+
+    .age p, .race p, .both p, .bothuf p {
+        font-size: 18px;
+    }
+
+    .panel {
+        padding-top: 18%;
+    }
+
+    .age, .race, .both, .bothuf {
+        flex-direction: column-reverse;
+        padding-bottom: 100px;
+    }
+
+    .chart-parent {
+        width: 60vw;
+        height: 60vh;
+    }
+
+    .bt {
+        width: 95vw;
+        height: 75vh;
+    }
+
+    .preloader {
+        background-size: 50%;
+    }
+}
+
+@media (max-width: 583px) {
+    .bt {
+       width: 90vw;
+       height: 90vh;
+       padding: 20px;
+    }
+
+    .bc {
+        transform: translateY(5em);
+    }
+
+    .bothuf .description {
+        transform: translateY(-3em);
+    }
+}
+
+@media (max-width: 520px) {
+    .bt {
+       width: 90vw;
+       height: 90vh;
+    }
+}
+
+@media (max-width: 450px) {
+    .age h1, .race h1, .both h1,  .bothuf h1 { 
+        font-size: 38px;
+    }
+
+    .age p, .race p, .both p, .bothuf p {
+        font-size: 15px;
+    }
+
+    .description {
+        transform: translateY(-0.5em);
+    }
+
+    .chart-parent {
+        width: 80vw;
+        height: 100vh;
+    }
+
+    .bt {
+        width: 100vw;
+        height: 120vh;
+    }
+
+
+    .both .description {
+        font-size: 16px;
+    }
+
+}
+
+@media (max-width: 375px) {
+    .panel {
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+
+    .chart-parent {
+        width: 90vw;
+        height: 100vh;
+    }
+
+    .bt {
+        width: 108vw;
+        height: 108vh;
+    }
+}
+
+@media (max-width: 350px) {
+    .age h1, .race h1, .both h1, .bothuf h1 {
+        font-size: 35px;
+    }
+
+    .age p, .race p, .both p, .bothuf p {
+        font-size: 15px;
+    }
+
+}
+
+@media (max-width: 325px) {    
+    .age h1, .race h1, .both h1, .bothuf h1 {
+        font-size: 30px;
+    }
+
+    .age p, .race p, .both p, .bothuf p {
+        font-size: 12px;
+    }
+
+    .bt {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .description {
+        padding-right: 50px;
+    }
+
+    .chart-parent {
+        width: 90vw;
+        height: 100vh;
+    }
+}
+
+@media (max-width: 272px) {
+    .age h1, .race h1, .both h1, .bothuf h1 {
+        font-size: 25px;
+    }
+
+    .age p, .race p, .both p, .bothuf p {
+        font-size: 10px;
+    }
+}
+/* Change flex-direction to column from 768px */

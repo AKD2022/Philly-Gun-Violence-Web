@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="initial-scale = 1.0, user-scalable = no, height=device-height" />
+  
+
+    <!--GSAP Scrolltrigger Imports-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!--Font-Awesome Imports-->
+    <script src="https://kit.fontawesome.com/4d72ef9868.js" crossorigin="anonymous"></script>
+
+    <!--Leaflet Imports-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+
+    <link rel="stylesheet" href="CSS/where.css">
+    <link rel="stylesheet" href="CSS/generals.css">
+    <link rel="icon" href="images/Website-logo.png">  
+    <title>Where it happens</title>
+</head>
+<body>
+<!--Navbar Start-->
+
+<div class="menu-wrap">
+    <input type="checkbox" class="toggler">
+    <div class="hamburger">
+        <div></div>
+</div>
+<div class="menu">
+  <div>
+      <div>
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="statistics.html" >Statistics - Numbers</a></li>
+              <li><a href="where.html"style="border-bottom-width: 5px; border-bottom-style: solid;">Statistics - Location</a></li>
+              <li><a href="prevention.html">Prevention</a></li>
+              <li><a href="CallToAction.html">Call To Action</a></li>
+              <li><a href="IncidentReporting.html">Incident Reporting</a></li>
+          </ul>
+        </div>
+    </div>
+  </div>
+</div>
+<!--Navbar End-->
+
+<!--Preloader-->
+<div id="preloader"></div>
+
+<!--Home Starts-->
+
+<div class="container">
+
+  <div class="panel firstContainer">
+
+    <!--Intro Starts -->
+    <div class="intro">
+      <h1>Learn Where</h1>
+      <p>Now that you know the numbers, we need to continue. Learning about Gun Violence and then being able 
+        to prevent it, isn't helpful without knowing where it happens the most. Instead of looking at Philadelphia 
+        as a whole, its better to look at it seperately. In these next few sections, you will deep dive into the 
+        three most populated sections of Philadelphia, be able to look at a map, and be able to learn where gun violence
+        happens the most. 
+      </p>
+      <div class="animate"><i class="fa-solid fa-angle-down"></i></div>
+    </div>
+  
+    <!--Intro Ends-->
+  </div>
+
+  <!--North Philly-->
+  <div class="panel overview">
+
+    <!--Intro To North Philly-->
+    <div>
+      <div class="overview-intro">
+       <h1 class="overview-header">Overview of the Maps</h1>
+       <p>In these next few sections, you will learn about the amounts of gun violence in North Philly, South Philly, 
+        and West Philly. These are areas where gun violence are most prominent and have the densest population. In 
+        each section, you will be able to interact with a map, which have circles to indicate high to low areas of  
+        gun violence, but since it is so hard to get exact data points, these will be estimated. In each section, there
+        is also a short summary explaining what we can learn from the datapoints on the map. 
+        <br><i>Note: All <a href="https://controller.phila.gov/philadelphia-audits/mapping-gun-violence/#/?year=2024&map=11.00%2F39.98500%2F-75.15000">data</a> is from 2023</i>
+       </p>
+      </div>
+      
+      <div class="indication">
+        <i class="fa-solid fa-arrow-right"></i>
+        <p>1/4</p>
+      </div>
+       
+    </div>
+
+  </div>
+
+  <!--North Philly Map-->
+  <section class="panel northPhilly">
+    <div>
+      <h1>North Philly</h1> 
+      <p id="dp">This is a map that outlines North Philly's gun violence. You can click on certain areas on the map for 
+        detailed statistics. 
+      </p>
+
+      <button class="button" id="expandMapNorth" onclick="expandMap('northPhilly')">Click to Expand Map</button>
+      <button class="button" id="closeMapNorth" onclick="closeMap()">Close Map</button>
+      <div id="northMap"></div>
+      
+
+      <div class="map-text">
+          <p>Red circles indicate high gun violence areas (100+ incidents)</p>
+          <p>Yellow circles indicate medium gun violence areas (50-99 incidents)</p>
+          <p>Green circles indicate low gun violence areas (below 20 incidents)</p>
+      </div>
+      
+      <div class="summary">
+        <h2 class="header">What can we learn from this?</h1>
+        <p class="description">
+          The central part of North Philly is here most gun violence cases happen, there were about 550-600 incidents there. 
+          When going into northeast, we see a decrease, and by the top of the map, there are less incidents. In Northwest Philly 
+          (the left of the map), there are hardly any incidents, and only and max-estimate of 5 incidents. 
+        </p>
+      </div>
+
+      <div class="indication">
+        <i class="fa-solid fa-arrow-right"></i>
+        <p>2/4</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!--South Philly 2-->
+  <section class="panel southPhilly">
+    <h1>South Philly</h1> 
+    <p class="dp">
+      This is a map that outlines south Philly's gun violence. You can hover or click on certain areas on the map for 
+      detailed statistics.
+    </p>
+
+    <button class="button" id="expandMapSouth" onclick="expandMap('southPhilly')">Click to Expand Map</button>
+    <button class="button" id="closeMapSouth" onclick="closeMap()">Close Map</button>
+    <div id="southMap"></div>
+    
+
+    <div class="map-text">
+      <p>Red circles indicate high gun violence areas (100+ incidents)</p>
+      <p>Yellow circles indicate medium gun violence areas (50-99 incidents)</p>
+      <p>Green circles indicate low gun violence areas (below 20 incidents)</p>
+    </div>
+  
+    <div class="summary">
+      <h2 class="header">What can we learn from this?</h1>
+      <p class="description">
+        South Philly in total is not a big area. Most of the gun violence is spread out so its hard to place more than one circle
+        on the map. South Philly in general is a "high violence" area based on the categories that I created, but it's max-estimate 
+        is 130, nowhere near as high as North Philly. 
+      </p>
+    </div>
+
+    <div class="indication">
+      <i class="fa-solid fa-arrow-right"></i>
+      <p>3/4</p>
+    </div>
+
+  </section>
+
+  <!--West 2-->
+  <section class="panel westPhilly">
+    <h1>West Philly</h1> 
+    <p class="dp">
+      This is a map that outlines West Philly's gun violence crisis. 
+    </p>
+
+    <button class="button" id="expandMapWest" onclick="expandMap('westPhilly')">Click to Expand Map</button>
+    <button class="button" id="closeMapWest" onclick="closeMap()">Close Map</button>
+    <div id="westMap"></div>
+    
+
+    <div class="map-text">
+      <p>Red circles indicate high gun violence areas (100+ incidents)</p>
+      <p>Yellow circles indicate medium gun violence areas (50-99 incidents)</p>
+      <p>Green circles indicate low gun violence areas (below 20 incidents)</p>
+    </div>
+  
+    <div class="summary">
+      <h2 class="header">What can we learn from this?</h1>
+      <p class="description">
+        West Philly has a lot of variation in its gun violence incidents. In the top right corner,
+        we see an increase of cases, and when we go all the way west, (to the left of the map), this is
+        where west philly contains most of its incidents. It does have one green area, though, its very 
+        small, and we want it to be the whole area, rather than just one tiny bit.  
+      </p>
+    </div>
+
+    <div class="indication">
+      <i class="fa-solid fa-arrow-right"></i>
+      <p>4/4</p>
+    </div>
+
+  </section>
+
+  <section class="panel toNext">
+      <h1>Prevention</h1>
+      <p>
+        Now that we know, the detailed statistics, numbers and location, its time to move to prevention. There's
+        no way that gun violence will stop, unless we take action, and the best way to start, is to learn how 
+        it's caused, and then how to prevent it.
+      </p>
+      <a href="prevention.html" class="btn">Learn to Prevent</a>
+  </section>
+</div>
+
+
+
+
+<script src="JS/where.js"></script>
+</body>
+</html>

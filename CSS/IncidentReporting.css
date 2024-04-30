@@ -1,0 +1,284 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+	--blue: #4d5ca1;
+    --gray: #46474a;
+    --headerColor: #76b5f0;
+}
+
+*::selection {
+    color: black;
+}
+
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    radial-gradient(transparent 30%, black 99%), 
+    url(../images/incidentReportingbg.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+#container {
+    width: 90%;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.155);
+    border-top: 1px solid rgba(157, 148, 148, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    z-index: 5;
+    position: absolute; 
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    animation-delay: 1s;
+    animation: fade-in 2s;
+}
+
+@keyframes fade-in {
+    0%, 50% {
+        opacity: 0;
+    } 100% {
+        opacity: 1;
+    }
+}
+
+
+#container form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.inputBox{
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.inputBox input[type="text"], .inputBox input[type="date"]{
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.2);
+    padding: 0px 10px;
+    font-size: 16px;
+    color: #444;
+}
+
+.inputBox textarea{
+    width: 100%;
+    height: 120px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.2);
+    padding: 0px 10px;
+    font-size: 16px;
+    color: #444;
+}
+
+.inputBox button{
+    width: 100%;    
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    background: rgb(0, 119, 255);
+    color: #FFF;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+
+.inputBox button:hover{
+    background: rgb(0, 17, 255);
+    transition: all 0.3s ease;
+}
+
+::placeholder{
+    font-size: 16px;
+}
+
+.alert{
+    width: 100%;
+    background: rgb(0, 255, 106);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 900;
+    display: none;
+}
+
+/* Table */
+#tableContainer {
+    max-height: 600px;
+    overflow-y: auto;
+    padding: 30px;
+    display: flex;
+}
+
+#tableContainer.disappear {
+    display: none;
+}
+
+table {
+    align-items: center;
+    font-size: 30px;
+    padding: 30px;
+    width: 100%;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+
+/* Open and Close Form */
+.btn {
+    text-align: center;
+    display: inline-block;
+    padding: 10px;
+    border: 2px solid gray;
+    color: gray;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 40px;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    margin-top: 1rem;
+    margin-bottom: 10px;
+}
+
+.btn::before{
+    content: ' ';
+    position: absolute;
+    top: 0; right: 0;
+    width: 0%;
+    height: 100%;
+    background: gray;
+    transition: .3s linear;
+    z-index: -1;
+}
+
+.btn:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+.btn:hover{
+    color: #fff;
+}
+
+.btnContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Preloader 
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1000;
+    background: black url("../images/preloader-icon.gif") no-repeat fixed center;
+    background-size: 20%;
+}
+
+.removePreloader {
+    animation: vanish 1s forwards;
+}
+
+@keyframes vanish {
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+}
+*/
+
+/* Media Queries */
+@media (max-width: 768px) {
+    table {
+        font-size: 15px;
+        width: 300px;
+    }
+    
+    .container {
+        overflow-x: none;
+    }
+}
+
+@media (max-width: 500px) {
+    table {
+        font-size: 12px;
+        width: 200px;
+    }
+    
+    th {
+        font-size: 120%;
+    }
+
+    #openFormButton {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 459px) {
+    table {
+        font-size: 10px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 380px) {
+    table {
+        font-size: 8px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 340px) {
+    table {
+        font-size: 6px;
+        padding: .1px;
+    }
+
+    th {
+        font-size: 150%;
+    }
+}

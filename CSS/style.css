@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+body {
+    position: absolute;
+}
+
+/* Home Page Starts */
+.container {
+    position: fixed;
+    background-image: url(../images/statistics-home-1.jpeg), url(../images/statistics-home-2.jpeg), url(../images/Home-1.jpeg), url(../images/statistics-home-4.jpeg), url(../images/Home-2.jpeg);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    animation: animate 30s ease-in-out infinite;
+    background-size: cover;
+    background-position: center;
+}
+
+
+@keyframes animate {
+    0%, 100% {
+        background-image: url(../images/statistics-home-1.jpeg);
+    }
+    20% {
+        background-image: url(../images/statistics-home-2.jpeg);
+    }
+    40%{
+        background-image: url(../images/Home-1.jpeg);
+    }
+    60% {
+        background-image: url(../images/statistics-home-4.jpeg);
+    }
+    80% {
+        background-image: url(../images/Home-2.jpeg);
+    }
+}
+
+.outer {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.details {
+    color: white;
+    padding: 50px;
+    text-align: left;
+}
+
+p {
+    font-size: 20px;
+}
+
+h1 {
+    font-size: 4em;
+    color: white;
+    padding-bottom: 20px;
+}
+
+.title-fade {
+    opacity: 1;
+    animation: title;
+    animation-duration: 4s;
+}
+
+@keyframes title {
+    0%, 15% {
+        opacity: 0;
+    } 100% {
+        opacity: 1;
+    }
+}
+
+.p-fade {
+    opacity: 1;
+    animation-delay: 4s;
+    animation: p 5s;
+}
+
+@keyframes p {
+    0%, 30% {
+        opacity: 0;
+    } 100% {
+        opacity: 1;
+    }
+}
+
+.btn-fade {
+    opacity: 1;
+    animation: btn;
+    animation-duration: 6s;
+}
+
+@keyframes btn {
+    0%, 40% {
+        opacity: 0;
+    } 100% {
+        opacity: 1;
+    }
+}
+
+/* Preloader */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1000;
+    background: black url("../images/preloader-icon.gif") no-repeat fixed center;
+    background-size: 20%;
+}
+
+.removePreloader {
+    animation: vanish 1s forwards;
+}
+
+@keyframes vanish {
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+}
+  
+
+
+/* Media Queries Start */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.9em;
+    }
+
+    p {
+        font-size: 1.1em
+    }
+}
+
+@media (max-width: 320px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    p {
+        font-size: 1em
+    }
+}
