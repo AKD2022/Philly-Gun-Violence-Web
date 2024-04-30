@@ -158,3 +158,7 @@ window.addEventListener("load", removePreloader);
 function removePreloader() {
   preloader.classList.add("removePreloader");
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> c2e53990f419af011813bebc4693138bfae8fbb2

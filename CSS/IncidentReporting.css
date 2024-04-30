@@ -207,7 +207,11 @@ th, td {
     align-items: center;
 }
 
+<<<<<<< HEAD
 /* Preloader 
+=======
+/* Preloader */
+>>>>>>> c2e53990f419af011813bebc4693138bfae8fbb2
 #preloader {
     position: fixed;
     top: 0;
@@ -229,7 +233,10 @@ th, td {
       visibility: hidden;
     }
 }
+<<<<<<< HEAD
 */
+=======
+>>>>>>> c2e53990f419af011813bebc4693138bfae8fbb2
 
 /* Media Queries */
 @media (max-width: 768px) {
