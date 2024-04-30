@@ -164,6 +164,10 @@ th, td {
     text-align: left;
 }
 
+th, tr {
+    position: fixed;
+}
+
 
 /* Open and Close Form */
 .btn {
