@@ -140,6 +140,7 @@ body {
 
 /* Table */
 #tableContainer {
+    max-height: 600px;
     overflow-y: auto;
     padding: 30px;
     display: flex;
@@ -161,11 +162,6 @@ th, td {
     border: 1px solid #ddd;
     text-align: left;
 }
-
-th, tr {
-    position: fixed;
-}
-
 
 /* Open and Close Form */
 .btn {
