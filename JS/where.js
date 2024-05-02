@@ -18,7 +18,6 @@ gsap.to(sections, {
 
 var width;
 
-
 /* North Philly Map JS */
 function initializeNorthMap() {
   var zoomLevel = 10;

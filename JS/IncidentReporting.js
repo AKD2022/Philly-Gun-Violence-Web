@@ -36,7 +36,7 @@ function submitForm(e) {
     }
 
     if (sectionPhilly === "") {
-        sectionPhilly = "<i>No Description Provided<i>"
+        sectionPhilly = "<i>No Section Provided<i>"
     }
 
     // console.log(location, date, descContent);

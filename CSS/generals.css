@@ -165,8 +165,8 @@ body {
 .btn {
     display: inline-block;
     padding: 10px;
-    border: .2rem solid gray;
-    color: gray;
+    border: .2rem solid #7DF9FF;
+    color: #7DF9FF; 
     cursor: pointer;
     font-size: 1em;
     border-radius: 3rem;
@@ -184,7 +184,7 @@ body {
     top: 0; right: 0;
     width: 0%;
     height: 100%;
-    background: gray;
+    background: #7DF9FF; 
     transition: .3s linear;
     z-index: -1;
 }
@@ -195,7 +195,7 @@ body {
 }
 
 .btn:hover{
-    color: #fff;
+    color: black;
 }
 
 ::-webkit-scrollbar {

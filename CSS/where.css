@@ -59,14 +59,15 @@ html, body {
 }
 
 .intro p {
+	display: flex;
 	font-size: 1.5em;
 	padding: 20px;
 }
 
 .intro h1 {
+	display: flex;
 	font-size: 3em;
 }
-
 
 .animate {
 	color: white;
@@ -84,7 +85,7 @@ html, body {
 
 	75% {
 		opacity: 0;
-		transform: translateY(2em);
+		transform: translateY(1.5em);
 	}
 
 	99% {
@@ -256,43 +257,10 @@ html, body {
 	background-position: center;
 	background-attachment: fixed;
 }
-
-/* Button Design */
-.button {
-    padding: 10px;
-    border: 2px solid gray;
-    color: gray;
-    cursor: pointer;
-    font-size: 15px;
-    border-radius: 40px;
-    position: relative;
-    overflow: hidden;
-    z-index: 0;
-    margin-top: 1rem;
-    margin-bottom: 10px;
-	background-color: transparent;
+/* button */
+button {
+	background: none;
 }
-
-.button::before{
-    content: ' ';
-    position: absolute;
-    top: 0; right: 0;
-    width: 0%;
-    height: 100%;
-    background: gray;
-    transition: .3s linear;
-    z-index: -1;
-}
-
-.button:hover::before {
-    width: 100%;
-    left: 0;
-}
-
-.button:hover{
-    color: #fff;
-}
-
 /* North Philly Map Start */
 #northMap.hidden{
 	display: none !important;
@@ -304,7 +272,7 @@ html, body {
 	animation: opacityOpen 0.5s;
 	height: 30em !important;
 	width: 50em !important;
-	margin-right: 10px;
+	margin-right: 50px;
 	border-radius: 50px;
 }
 
@@ -341,7 +309,7 @@ html, body {
 	animation: opacityOpen 0.5s;
 	height: 30em !important;
 	width: 50em !important;
-	margin-right: 10px;
+	margin-right: 50px;
 	border-radius: 50px;
 }
 /* South Philly Map End */
@@ -357,7 +325,7 @@ html, body {
 	animation: opacityOpen 0.5s;
 	height: 30em !important;
 	width: 50em !important;
-	margin-right: 10px;
+	margin-right: 50px;
 	border-radius: 50px;
 }
 /* West Philly Map End */
