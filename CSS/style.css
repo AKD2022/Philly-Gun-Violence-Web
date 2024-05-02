@@ -138,6 +138,13 @@ h1 {
       visibility: hidden;
     }
 }
+
+@keyframes vanish {
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+}
   
 
 

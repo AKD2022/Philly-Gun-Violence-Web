@@ -47,6 +47,11 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 /* Loading */
-setTimeout(function() {
-    $('#preloader').fadeToggle();
-}, 400);
+var preloader = document.getElementById("preloader")
+
+window.addEventListener("load", removePreloader);
+
+function removePreloader() {
+  preloader.classList.add("removePreloader");
+}
+
