@@ -77,13 +77,12 @@ h1 {
 
 .details .text {
     opacity: 0;
-    transition: opacity 2.5s ease-in;
+    transition: opacity 1.5s ease-in;
 }
 
 .text.show {
     opacity: 1;
 }
-
 
 
 

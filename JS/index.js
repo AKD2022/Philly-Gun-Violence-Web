@@ -22,7 +22,6 @@ document.addEventListener("DOMContentLoaded", function() {
         runAnimations();
     } else {
         const texts = document.querySelectorAll(".text");
-
         texts.forEach((text, index) => {
             text.classList.add('show');
         });

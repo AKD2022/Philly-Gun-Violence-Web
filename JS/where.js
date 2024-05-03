@@ -388,9 +388,11 @@ function closeMap() {
 }
 
 /* Loading */
-var preloader = document.getElementById("preloader")
+document.addEventListener("DOMContentLoaded", function () {
+  removePreloader();
+});
 
-window.addEventListener("load", removePreloader);
+var preloader = document.getElementById("preloader")
 
 function removePreloader() {
   preloader.classList.add("removePreloader");
