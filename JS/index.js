@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const slideshow = document.querySelector(".container");
     slideshow.classList.add("start-slideshow");
 
+    removePreloader();
     function runAnimations() {
         const texts = document.querySelectorAll(".text");
         let delay = 450;
@@ -30,8 +31,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 /* Loading */
 var preloader = document.getElementById("preloader");
-
-window.addEventListener("load", removePreloader);
 
 function removePreloader() {
     preloader.classList.add("removePreloader");
