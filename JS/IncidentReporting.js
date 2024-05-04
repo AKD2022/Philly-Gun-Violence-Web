@@ -166,7 +166,7 @@ function removePreloader() {
 /* Notif */
 const messaging = getMessaging(app);
 
-navigator.serviceWorker.register("./JS/sw.js").then(registration => {
+navigator.serviceWorker.register("sw.js").then(registration => {
     getToken(messaging, {
         serviceWorkerRegistration: registration,
         vapidKey: 'BE8VhuGOAZPYQQl-RPfkbjbM7yrctWZ3NJyF4cJx5-E0pjXmqAiOhPvHAA5LoN8fb0SNdgiRNV-j_Yn-BNZE9hE'}).then((currentToken) => {
