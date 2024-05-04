@@ -1,11 +1,18 @@
 var clicked = "clicked";
+var width = window.innerWidth;
 
 /* Gets position of page */
 window.addEventListener('scroll', function(e) {
     var scrollY = window.scrollY;
-    if (scrollY < 750 || scrollY > 1200) {
-        closeExpandedView();
-    } 
+    if (width <= 2000 && width >= 1000) {
+        if (scrollY < 750 || scrollY > 1200) {
+            closeExpandedView();
+        } 
+    } else if (width <= 1000 & width >= 500) {
+        if (scrollY < 450 || scrollY > 1050) {
+            closeExpandedView();
+        } 
+    }
     console.log(scrollY);
 });
 
