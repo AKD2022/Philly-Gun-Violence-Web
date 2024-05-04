@@ -152,7 +152,6 @@ window.closeForm = function () {
 
 
 /* Loading */
-
 var preloader = document.getElementById("preloader")
 
 window.addEventListener("load", removePreloader);

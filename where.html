@@ -64,10 +64,7 @@
     <div class="intro">
       <h1>Learn Where</h1>
       <p>Now that you know the numbers, we need to continue. Learning about Gun Violence and then being able 
-        to prevent it, isn't helpful without knowing where it happens the most. Instead of looking at Philadelphia 
-        as a whole, its better to look at it seperately. In these next few sections, you will deep dive into the 
-        three most populated sections of Philadelphia, be able to look at a map, and be able to learn where gun violence
-        happens the most. 
+        to prevent it, isn't helpful without knowing where it happens the most. 
       </p>
       <div class="animate"><i class="fa-solid fa-angle-down"></i></div>
     </div>
@@ -103,8 +100,8 @@
   <section class="panel northPhilly">
     <div>
       <h1>North Philly</h1> 
-      <p id="dp">This is a map that outlines North Philly's gun violence. You can click on certain areas on the map for 
-        detailed statistics. 
+      <p id="dp">This is a map that outlines North Philly's gun violence. You can click or hover over certain areas on the map
+        for detailed statistics.
       </p>
 
       <button class="btn" id="expandMapNorth" onclick="expandMap('northPhilly')">Click to Expand Map</button>
@@ -113,9 +110,9 @@
       
 
       <div class="map-text">
-          <p>Red circles indicate high gun violence areas (100+ incidents)</p>
-          <p>Yellow circles indicate medium gun violence areas (50-99 incidents)</p>
-          <p>Green circles indicate low gun violence areas (below 20 incidents)</p>
+          <p><i style="color: red">Red</i> circles indicate high gun violence areas (100+ incidents)</p>
+          <p><i style="color: yellow">Yellow</i> circles indicate medium gun violence areas (50-99 incidents)</p>
+          <p><i style="color: #00FF00">Green</i> circles indicate low gun violence areas (below 20 incidents)</p>
       </div>
       
       <div class="summary">
@@ -138,9 +135,8 @@
   <!--South Philly 2-->
   <section class="panel southPhilly">
     <h1>South Philly</h1> 
-    <p class="dp">
-      This is a map that outlines south Philly's gun violence. You can hover or click on certain areas on the map for 
-      detailed statistics.
+    <p id="dp">This is a map that outlines South Philly's gun violence. You can click or hover over certain areas on the map
+      for detailed statistics.
     </p>
 
     <button class="btn" id="expandMapSouth" onclick="expandMap('southPhilly')">Click to Expand Map</button>
@@ -149,9 +145,9 @@
     
 
     <div class="map-text">
-      <p>Red circles indicate high gun violence areas (100+ incidents)</p>
-      <p>Yellow circles indicate medium gun violence areas (50-99 incidents)</p>
-      <p>Green circles indicate low gun violence areas (below 20 incidents)</p>
+      <p><i style="color: red">Red</i> circles indicate high gun violence areas (100+ incidents)</p>
+      <p><i style="color: yellow">Yellow</i> circles indicate medium gun violence areas (50-99 incidents)</p>
+      <p><i style="color: #00FF00">Green</i> circles indicate low gun violence areas (below 20 incidents)</p>
     </div>
   
     <div class="summary">
@@ -173,8 +169,8 @@
   <!--West 2-->
   <section class="panel westPhilly">
     <h1>West Philly</h1> 
-    <p class="dp">
-      This is a map that outlines West Philly's gun violence crisis. 
+    <p id="dp">This is a map that outlines West Philly's gun violence. You can click or hover over certain areas on the map
+      for detailed statistics.
     </p>
 
     <button class="btn" id="expandMapWest" onclick="expandMap('westPhilly')">Click to Expand Map</button>
@@ -183,9 +179,9 @@
     
 
     <div class="map-text">
-      <p>Red circles indicate high gun violence areas (100+ incidents)</p>
-      <p>Yellow circles indicate medium gun violence areas (50-99 incidents)</p>
-      <p>Green circles indicate low gun violence areas (below 20 incidents)</p>
+      <p><i style="color: red">Red</i> circles indicate high gun violence areas (100+ incidents)</p>
+      <p><i style="color: yellow">Yellow</i> circles indicate medium gun violence areas (50-99 incidents)</p>
+      <p><i style="color: #00FF00">Green</i> circles indicate low gun violence areas (below 20 incidents)</p>
     </div>
   
     <div class="summary">
@@ -208,9 +204,7 @@
   <section class="panel toNext">
       <h1>Prevention</h1>
       <p>
-        Now that we know, the detailed statistics, numbers and location, its time to move to prevention. There's
-        no way that gun violence will stop, unless we take action, and the best way to start, is to learn how 
-        it's caused, and then how to prevent it.
+        Now that we know the detailed statistics, numbers and location, its time to learn how to prevent. 
       </p>
       <a href="prevention.html" class="btn">Learn to Prevent</a>
   </section>
@@ -219,6 +213,6 @@
 
 
 
-<script src="JS/where.js" async></script>
+<script src="JS/where.js"></script>
 </body>
 </html>
