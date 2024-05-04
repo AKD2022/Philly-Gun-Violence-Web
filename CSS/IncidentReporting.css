@@ -228,6 +228,45 @@ th, td {
     }
 }
 
+/* Button */
+#question_button {
+    cursor: pointer;
+    position: fixed;
+    bottom: 5%;
+    right: 4%;
+    border: none;
+    margin: 15px;
+    padding: 10px 19px;
+    font-size: 18px !important;
+    border-radius: 50%;
+    color: rgb(255, 255, 255);
+    background-color: rgba(29, 27, 27, 0.52);
+  }
+  
+  #explain_box {
+    position: fixed;
+    width: inherit;
+    height: inherit;
+    max-width: 35%;
+    padding-left: calc(-5px + 1vh);
+    overflow-y: auto;
+    bottom: 5%;
+    right: 4%;
+    margin: 55px;
+    background-color: white;
+    z-index: 5;
+    border-radius: 25px;
+    display: none;
+    max-height: 120px;
+  }
+  
+  #explain_box p {
+    color: black !important;
+    margin: 10px;
+    z-index: 6;
+  }
+  
+
 /* Media Queries */
 @media (max-width: 768px) {
     table {

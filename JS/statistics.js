@@ -7,8 +7,6 @@ function removePreloader() {
   preloader.classList.add("removePreloader");
 }
 
-
-
 /* Age */
 const age = document.getElementById('myChart2');
   new Chart(age, {

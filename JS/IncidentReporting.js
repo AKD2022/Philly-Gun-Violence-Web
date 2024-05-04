@@ -114,6 +114,16 @@ incidentFormDB.on('value', function (snapshot) {
     }
 });
 
+/* Question Button */
+const question_button = document.getElementById("question_button");
+const explain_box = document.getElementById("explain_box");
+
+question_button.addEventListener("mouseover", function() {
+  explain_box.style.display = 'block';
+});
+question_button.addEventListener("mouseout", function() {
+  explain_box.style.display = 'none';
+});
 
 /* Close and Open Report Form */
 const openFormBtn = document.getElementById("openFormButton");
@@ -124,6 +134,7 @@ window.openForm = function () {
     var formContainer = document.getElementById('container');
     formContainer.style.display = 'block';
     openFormBtn.style.display = 'none';
+    question_button.style.display = 'none';
 
     formContainer.style.transition = 'opacity 0.5s';
     formContainer.style.opacity = 0;
@@ -131,13 +142,13 @@ window.openForm = function () {
     formContainer.style.opacity = 1;
 
     table.classList.add('disappear');
-
 }
 
 window.closeForm = function () {
     var formContainer = document.getElementById('container');
     formContainer.style.display = 'none';
-    openFormBtn.style.display = 'block'
+    openFormBtn.style.display = 'block';
+    question_button.style.display = 'block';
 
     formContainer.classList.add('fade-out');
 
@@ -147,9 +158,7 @@ window.closeForm = function () {
     }, 500);
 
     table.classList.remove('disappear');
-
 }
-
 
 /* Loading */
 var preloader = document.getElementById("preloader")
