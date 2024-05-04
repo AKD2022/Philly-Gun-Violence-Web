@@ -1,3 +1,4 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
 import { getMessaging , getToken} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-messaging.js"
 
 const firebaseConfig = { 
@@ -151,7 +152,7 @@ window.closeForm = function () {
 
 
 /* Loading */
-/*
+
 var preloader = document.getElementById("preloader")
 
 window.addEventListener("load", removePreloader);
@@ -159,28 +160,6 @@ window.addEventListener("load", removePreloader);
 function removePreloader() {
     preloader.classList.add("removePreloader");
 }
-*/
 
-/* Send Notifictation */
 
-/* Notif */
-const messaging = getMessaging(app);
 
-navigator.serviceWorker.register("sw.js").then(registration => {
-    getToken(messaging, {
-        serviceWorkerRegistration: registration,
-        vapidKey: 'BE8VhuGOAZPYQQl-RPfkbjbM7yrctWZ3NJyF4cJx5-E0pjXmqAiOhPvHAA5LoN8fb0SNdgiRNV-j_Yn-BNZE9hE'}).then((currentToken) => {
-        if (currentToken) {
-            console.log("Token: " + currentToken);
-          // Send the token to your server and update the UI if necessary
-          // ...
-        } else {
-          // Show permission request UI
-          console.log('No registration token available. Request permission to generate one.');
-          // ...
-        }
-      }).catch((err) => {
-        console.log('An error occurred while retrieving token. ', err);
-        // ...
-    });
-});
