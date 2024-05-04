@@ -1,27 +1,29 @@
-import { getDatabase } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-database.js"
+import { getMessaging , getToken} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-messaging.js"
 
-const firebaseConfig = {
-    apiKey: "AIzaSyBp_zqXnC5fO0-HLdPqCy-fPpc0weOBbiM",
-    authDomain: "incidentreporting-91be7.firebaseapp.com",
-    databaseURL: "https://incidentreporting-91be7-default-rtdb.firebaseio.com",
+const firebaseConfig = { 
+    apiKey: "AIzaSyBp_zqXnC5fO0-HLdPqCy-fPpc0weOBbiM", 
+    authDomain: "incidentreporting-91be7.firebaseapp.com", 
+    databaseURL: "https://incidentreporting-91be7-default-rtdb.firebaseio.com", 
     projectId: "incidentreporting-91be7",
-    storageBucket: "incidentreporting-91be7.appspot.com",
-    messagingSenderId: "952441251953",
-    appId: "1:952441251953:web:d3e7001303b47e8b0953d0"
+    storageBucket: "incidentreporting-91be7.appspot.com", 
+    messagingSenderId: "952441251953", 
+    appId: "1:952441251953:web:d3e7001303b47e8b0953d0" 
 };
 
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+const app = firebase.initializeApp(firebaseConfig);
+
 // Reference Database
 var incidentFormDB = firebase.database().ref('IncidentForm');
 
 document.getElementById('incidentForm').addEventListener("submit", submitForm);
+
 function submitForm(e) {
     e.preventDefault();
     var location = getElementVal('location');
     var date = getElementVal('date');
     var descContent = getElementVal('descContent');
-    var sectionPhilly  = getElementVal('sectionPhilly');
+    var sectionPhilly = getElementVal('sectionPhilly');
 
     if (location === "") {
         location = "<i>No Location Provided<i>";
@@ -29,7 +31,7 @@ function submitForm(e) {
 
     if (date === "") {
         date = "<i>No Date Provided<i>";
-    } 
+    }
 
     if (descContent === "") {
         descContent = "<i>No Description Provided<i>"
@@ -44,12 +46,12 @@ function submitForm(e) {
 
     // Enable Alert
     document.querySelector('.alert').style.display = 'block';
-    
+
     // Remove Alert & Reset Form
     setTimeout(() => {
         document.querySelector('.alert').style.display = 'none';
         window.location.reload(true);
-    }, 2500);   
+    }, 2500);
 
     document.getElementById("incidentForm").reset();
 
@@ -65,7 +67,7 @@ const saveMessages = (location, date, descContent, sectionPhilly) => {
     });
 
     var tableBody = document.getElementById('incidentTableBody');
-    var newRow = tableBody.insertRow(0); 
+    var newRow = tableBody.insertRow(0);
 
     var cell1 = newRow.insertCell(0);
     var cell2 = newRow.insertCell(1);
@@ -85,11 +87,11 @@ const getElementVal = (id) => {
 /* Insert To table */
 var tableBody = document.getElementById('incidentTableBody');
 
-incidentFormDB.on('value', function(snapshot) {
-    tableBody.innerHTML = ''; 
-    var rows = []; 
+incidentFormDB.on('value', function (snapshot) {
+    tableBody.innerHTML = '';
+    var rows = [];
 
-    snapshot.forEach(function(childSnapshot) {
+    snapshot.forEach(function (childSnapshot) {
         var childData = childSnapshot.val();
 
         var row = tableBody.insertRow(0);
@@ -112,20 +114,18 @@ incidentFormDB.on('value', function(snapshot) {
 });
 
 
-
-
 /* Close and Open Report Form */
 const openFormBtn = document.getElementById("openFormButton");
 const closeFormBtn = document.getElementById('closeFormBtn');
 const table = document.getElementById("tableContainer");
 
-window.openForm = function() {
+window.openForm = function () {
     var formContainer = document.getElementById('container');
     formContainer.style.display = 'block';
     openFormBtn.style.display = 'none';
 
     formContainer.style.transition = 'opacity 0.5s';
-    formContainer.style.opacity = 0; 
+    formContainer.style.opacity = 0;
     formContainer.offsetHeight;
     formContainer.style.opacity = 1;
 
@@ -133,7 +133,7 @@ window.openForm = function() {
 
 }
 
-window.closeForm = function() {
+window.closeForm = function () {
     var formContainer = document.getElementById('container');
     formContainer.style.display = 'none';
     openFormBtn.style.display = 'block'
@@ -142,7 +142,7 @@ window.closeForm = function() {
 
     setTimeout(() => {
         formContainer.style.display = 'none';
-        formContainer.classList.remove('fade-out'); 
+        formContainer.classList.remove('fade-out');
     }, 500);
 
     table.classList.remove('disappear');
@@ -151,13 +151,36 @@ window.closeForm = function() {
 
 
 /* Loading */
-document.addEventListener("DOMContentLoaded", function () {
-    removePreloader();
-});
-  
+/*
 var preloader = document.getElementById("preloader")
-  
+
+window.addEventListener("load", removePreloader);
+
 function removePreloader() {
-  preloader.classList.add("removePreloader");
+    preloader.classList.add("removePreloader");
 }
-  
+*/
+
+/* Send Notifictation */
+
+/* Notif */
+const messaging = getMessaging(app);
+
+navigator.serviceWorker.register("../JS/sw.js").then(registration => {
+    getToken(messaging, {
+        serviceWorkerRegistration: registration,
+        vapidKey: 'BE8VhuGOAZPYQQl-RPfkbjbM7yrctWZ3NJyF4cJx5-E0pjXmqAiOhPvHAA5LoN8fb0SNdgiRNV-j_Yn-BNZE9hE'}).then((currentToken) => {
+        if (currentToken) {
+            console.log("Token: " + currentToken);
+          // Send the token to your server and update the UI if necessary
+          // ...
+        } else {
+          // Show permission request UI
+          console.log('No registration token available. Request permission to generate one.');
+          // ...
+        }
+      }).catch((err) => {
+        console.log('An error occurred while retrieving token. ', err);
+        // ...
+    });
+});

@@ -1,10 +1,9 @@
 /* Loading */
-document.addEventListener("DOMContentLoaded", function () {
-    removePreloader();
-});
-  
 var preloader = document.getElementById("preloader")
+
+window.addEventListener("load", removePreloader); 
+
 function removePreloader() {
-  preloader.classList.add("removePreloader");
+    preloader.classList.add("removePreloader");
+    runAnimations();
 }
-  

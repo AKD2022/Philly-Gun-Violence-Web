@@ -207,6 +207,7 @@ th, td {
 }
 
 /* Preloader */
+/*
 #preloader {
     position: fixed;
     top: 0;
@@ -221,6 +222,7 @@ th, td {
 .removePreloader {
     animation: vanish 1s forwards;
 }
+*/
 
 @keyframes vanish {
     100% {
