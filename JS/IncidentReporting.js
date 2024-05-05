@@ -1,6 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
 import { getMessaging, getToken } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-messaging.js"
 
+askForNotificationPermission();
 const firebaseConfig = {
     apiKey: "AIzaSyBp_zqXnC5fO0-HLdPqCy-fPpc0weOBbiM",
     authDomain: "incidentreporting-91be7.firebaseapp.com",
@@ -123,19 +124,26 @@ incidentFormDB.on('value', function (snapshot) {
 
 /* Sending Notification */
 function notif(descContent) {
-    Notification.requestPermission().then(perm => {
-        if (perm == "granted") {
-            const notification = new Notification("New Incident Reported", {
-                body: descContent,
-                icon: "images/Website-logo.png",
-            });
-            notification.onclick = function () {
-                window.open("https://akd2022.github.io/Philly-Gun-Violence-Web/IncidentReporting.html");
-            };
-        }
+    const notification = new Notification("New Incident Reported", {
+        body: descContent,
+        icon: "images/Website-logo.png",
     });
+    notification.onclick = function () {
+        window.open("https://akd2022.github.io/Philly-Gun-Violence-Web/IncidentReporting.html");
+    };
 }
 
+function askForNotificationPermission() {
+    if ("Notification" in window) {
+      Notification.requestPermission().then(function(permission) {
+        if (permission === "granted") {
+          console.log("Permission for notifications granted!");
+        }
+      });
+    } else {
+      console.log("This browser does not support desktop notification");
+    }
+}
 /* Question Button */
 const question_button = document.getElementById("question_button");
 const explain_box = document.getElementById("explain_box");
