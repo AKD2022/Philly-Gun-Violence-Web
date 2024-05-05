@@ -123,16 +123,38 @@ incidentFormDB.on('value', function (snapshot) {
 });
 
 /* Sending Notification */
-function notif(descContent) {
-    const notification = new Notification("New Incident Reported", {
-        body: descContent,
-        icon: "images/Website-logo.png",
-    });
-    notification.onclick = function () {
-        window.open("https://akd2022.github.io/Philly-Gun-Violence-Web/IncidentReporting.html");
-    };
+// Function to send notifications
+function sendNotification(title, options) {
+    // Check if browser supports notifications
+    if (!("Notification" in window)) {
+        console.error("This browser does not support desktop notification");
+        return;
+    }
+
+    // Check if the user has granted permission
+    if (Notification.permission === "granted") {
+        // If it's okay let's create a notification
+        const notification = new Notification(title, options);
+        notification.onclick = function () {
+            // Handle notification click event
+            window.open("https://akd2022.github.io/Philly-Gun-Violence-Web/IncidentReporting.html");
+        };
+    } else if (Notification.permission !== "denied") {
+        // Otherwise, we need to ask the user for permission
+        Notification.requestPermission().then(function (permission) {
+            // If the user accepts, let's create a notification
+            if (permission === "granted") {
+                const notification = new Notification(title, options);
+                notification.onclick = function () {
+                    // Handle notification click event
+                    window.open("https://akd2022.github.io/Philly-Gun-Violence-Web/IncidentReporting.html");
+                };
+            }
+        });
+    }
 }
 
+// Function to ask for notification permission
 function askForNotificationPermission() {
     Notification.requestPermission().then(function (permission) {
         if (permission === "granted") {
@@ -140,6 +162,7 @@ function askForNotificationPermission() {
         }
     });
 }
+
 /* Question Button */
 const question_button = document.getElementById("question_button");
 const explain_box = document.getElementById("explain_box");
