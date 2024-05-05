@@ -152,7 +152,7 @@ body {
     top: 0; right: 0;
     width: 0%;
     height: 100%;
-    background: gray;
+    background: #7DF9FF;
     transition: .3s linear;
     z-index: -1;
 }
@@ -160,8 +160,8 @@ body {
 .readMore {
     display: inline-block;
     padding: 10px;
-    border: 2px solid gray;
-    color: gray;
+    border: 2px solid #7DF9FF;
+    color: #7DF9FF;
     cursor: pointer;
     font-size: 15px;
     border-radius: 40px;
@@ -179,7 +179,7 @@ body {
 }
 
 .readMore:hover{
-    color: #fff;
+    color: black;
 }
 
 /* close button */
@@ -189,7 +189,7 @@ body {
     top: 0; right: 0;
     width: 0%;
     height: 100%;
-    background: gray;
+    background: #7DF9FF;
     transition: .3s linear;
     z-index: -1;
 }
@@ -197,8 +197,8 @@ body {
 .close-button {
     display: inline-block;
     padding: 10px;
-    border: 2px solid gray;
-    color: gray;
+    border: 2px solid #7DF9FF;
+    color: #7DF9FF;
     cursor: pointer;
     font-size: 15px;
     border-radius: 40px;
@@ -216,7 +216,7 @@ body {
 }
 
 .close-button:hover{
-    color: #fff;
+    color: black;
 }
 
 /* Slides */
@@ -266,7 +266,7 @@ body {
 
 
 p a {
-    color: gray;
+    color: #7DF9FF; 
     text-decoration: underline;
 }
 
@@ -404,6 +404,14 @@ i:hover {
         padding: 30px;
     }
 
+    .slide1-container h1, .slide2-container h1, .slide3-container h1 {
+        font-size: calc(1em + 2vw);
+    }
+
+    .slide1-container p, .slide2-container p, .slide3-container p {
+        font-size: calc(0.6em + 1vw);
+    }
+
     #expanded-view-1, #expanded-view-2, #expanded-view-3 {
         margin-left: calc(10px + 1vw);
         margin-right: calc(50px + 1vw);
@@ -431,7 +439,10 @@ i:hover {
     .home, .final {
         font-size: 60%;
     }
-    
+
+    .slide1-container p, .slide2-container p, .slide3-container p {
+        font-size: calc(0.5em + 1vw);
+    }
 }
 
 @media (max-width: 350px) {
@@ -439,5 +450,11 @@ i:hover {
         animation: fade-in 0.5s;
         padding: 50px;
         padding-top: calc(150px + 1vw);
+    }
+}
+
+@media (max-width: 323px) {
+    .slide1-container p, .slide2-container p, .slide3-container p {
+        font-size: calc(0.4em + 1vw);
     }
 }

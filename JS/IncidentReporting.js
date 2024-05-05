@@ -1,7 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
 import { getMessaging, getToken } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-messaging.js"
 
-askForNotificationPermission();
 const firebaseConfig = {
     apiKey: "AIzaSyBp_zqXnC5fO0-HLdPqCy-fPpc0weOBbiM",
     authDomain: "incidentreporting-91be7.firebaseapp.com",
@@ -12,16 +11,14 @@ const firebaseConfig = {
     appId: "1:952441251953:web:d3e7001303b47e8b0953d0"
 };
 
-
 // Initialize Firebase
 const app = firebase.initializeApp(firebaseConfig);
+const messaging = getMessaging(app);
 
 // Reference Database
 var incidentFormDB = firebase.database().ref('IncidentForm');
 
 document.getElementById('incidentForm').addEventListener("submit", submitForm);
-
-var notificationData;
 
 function submitForm(e) {
     var location = getElementVal('location');
@@ -56,14 +53,11 @@ function submitForm(e) {
     // Remove Alert & Reset Form
     setTimeout(() => {
         document.querySelector('.alert').style.display = 'none';
-        notif(descContent);
         window.location.reload(true);
     }, 2500);
 
     document.getElementById("incidentForm").reset();
 }
-
-
 
 const saveMessages = (location, date, descContent, sectionPhilly) => {
     var newIncidentForm = incidentFormDB.push();
@@ -122,46 +116,6 @@ incidentFormDB.on('value', function (snapshot) {
     }
 });
 
-/* Sending Notification */
-// Function to send notifications
-function sendNotification(title, options) {
-    // Check if browser supports notifications
-    if (!("Notification" in window)) {
-        console.error("This browser does not support desktop notification");
-        return;
-    }
-
-    // Check if the user has granted permission
-    if (Notification.permission === "granted") {
-        // If it's okay let's create a notification
-        const notification = new Notification(title, options);
-        notification.onclick = function () {
-            // Handle notification click event
-            window.open("https://akd2022.github.io/Philly-Gun-Violence-Web/IncidentReporting.html");
-        };
-    } else if (Notification.permission !== "denied") {
-        // Otherwise, we need to ask the user for permission
-        Notification.requestPermission().then(function (permission) {
-            // If the user accepts, let's create a notification
-            if (permission === "granted") {
-                const notification = new Notification(title, options);
-                notification.onclick = function () {
-                    // Handle notification click event
-                    window.open("https://akd2022.github.io/Philly-Gun-Violence-Web/IncidentReporting.html");
-                };
-            }
-        });
-    }
-}
-
-// Function to ask for notification permission
-function askForNotificationPermission() {
-    Notification.requestPermission().then(function (permission) {
-        if (permission === "granted") {
-            console.log("Permission for notifications granted!");
-        }
-    });
-}
 
 /* Question Button */
 const question_button = document.getElementById("question_button");

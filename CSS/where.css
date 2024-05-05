@@ -55,7 +55,6 @@ html, body {
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
-
 }
 
 .intro p {
@@ -74,7 +73,7 @@ html, body {
 	font-size: 5em;
 	animation: animate 2s ease-in infinite;
 	opacity: 1;
-	transform: translateY(1em);
+	rotate: -90deg;
 }
 
 
@@ -85,12 +84,12 @@ html, body {
 
 	75% {
 		opacity: 0;
-		transform: translateY(1.5em);
+		transform: translateY(0.5em);
 	}
 
 	99% {
 		opacity: 0;
-		transform: translateY(1em);
+		transform: translateY(0em);
 	}
 
 	100% {
@@ -188,8 +187,22 @@ html, body {
 	padding-top: 20px;
 }
 
+.header {
+	font-size: calc(0.5em + 1vw);
+}
+
+.description {
+	padding-top: 10px;
+	font-size: calc(0.25em + 1vw);
+}
+
 .map-text {
-	font-size: larger;
+	font-size: calc(0.3e, + 1vw);
+	padding-bottom: 20px;
+}
+
+.btn {
+	font-size: calc(0.3em + 1vw);
 }
 
 /* Backgrounds on Sections */
@@ -217,6 +230,7 @@ html, body {
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
+
 }
 
 .southPhilly {
@@ -404,18 +418,6 @@ button {
 		font-size: 80%;
 	}
 
-	.northPhilly .dp {
-		font-size: 1em;
-	}
-
-	.southPhilly .dp {
-		font-size: 1em;
-	}
-
-	.westPhilly .dp {
-		font-size: 1em;
-	}
-
 	.indication i {
 		font-size: 30px;
 	}
@@ -429,7 +431,21 @@ button {
 		padding-top: 1em;
 	}
 
-	.map-text, .summary {
+	.description {
+		font-size: calc(0.5em + 1vw);
+	}
+
+	.header {
+		font-size: calc(0.8em + 1vw);
+	}
+}
+
+@media (max-width: 585px) {
+	.summary {
+		transform: translateY(-30px);
+	}
+
+	.map-text {
 		font-size: 90%;
 	}
 }
@@ -481,10 +497,6 @@ button {
 	#northMap.visible, #southMap.visible, #westMap.visible {
 		height: 25em !important;
 		width: 28em !important;
-	}
-
-	.description {
-		font-size: 95%;
 	}
 }
 

@@ -9,7 +9,7 @@ gsap.to(sections, {
   scrollTrigger: {
     trigger: ".container",
     start: "top top",
-    scrub: 0.25, 
+    scrub: 0., 
     end: "+=3000",
     pin: true,
     snap: {snapTo: 1 / (sections.length - 1), directional: false},
