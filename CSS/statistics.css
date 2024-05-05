@@ -58,6 +58,7 @@ a {
       rgba(0, 0, 0, 0.7),
       rgba(0, 0, 0, 0.7)
     ),
+    radial-gradient(transparent 30%, black 99%), 
     url(../images/first_bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -90,9 +91,9 @@ h1 {
 .panel {
     height: 100vh;
     width: 100vw;
-    position: sticky;
     top: 0;
     padding: 20px;
+    position: sticky;
     align-items: center;
     animation-delay: 3s;
     animation: fade-in 1s;
@@ -112,6 +113,7 @@ h1 {
       rgba(0, 0, 0, 0.7),
       rgba(0, 0, 0, 0.7)
     ),
+    radial-gradient(transparent 30%, black 99%), 
     url(../images/age_bg.jpg);
     background-size: cover;
     background-position: center;
@@ -129,6 +131,7 @@ h1 {
       rgba(0, 0, 0, 1),
       rgba(0, 0, 0, 0.5)
     ),
+    radial-gradient(transparent 30%, black 99%), 
     url(../images/race_bg.jpg);
     background-size: cover;
     background-position: center;
@@ -155,6 +158,7 @@ h1 {
       rgba(0, 0, 0, 0.7),
       rgba(0, 0, 0, 0.5)
     ),
+    radial-gradient(transparent 30%, black 99%), 
     url(../images/bothuf_bg.jpeg);
     background-size: cover;
     background-position: center;
@@ -168,6 +172,7 @@ h1 {
       rgba(0, 0, 0, 0.7),
       rgba(0, 0, 0, 0.5)
     ),
+    radial-gradient(transparent 30%, black 99%), 
     url(../images/next_bg.jpeg);
     background-size: cover;
     background-position: center;
@@ -212,7 +217,8 @@ h1 {
       visibility: hidden;
     }
 }
-  
+
+
 
 
 /* Media Queries */
