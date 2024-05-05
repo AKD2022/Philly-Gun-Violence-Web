@@ -134,15 +134,11 @@ function notif(descContent) {
 }
 
 function askForNotificationPermission() {
-    if ("Notification" in window) {
-      Notification.requestPermission().then(function(permission) {
+    Notification.requestPermission().then(function (permission) {
         if (permission === "granted") {
-          console.log("Permission for notifications granted!");
+            console.log("Permission for notifications granted!");
         }
-      });
-    } else {
-      console.log("This browser does not support desktop notification");
-    }
+    });
 }
 /* Question Button */
 const question_button = document.getElementById("question_button");
