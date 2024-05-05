@@ -22,6 +22,7 @@ body {
   position: absolute;
   height: unset;
   background: black;
+  width: 100%;
 }
 
 p a {
@@ -123,10 +124,6 @@ html, body {
 	width: 100vw;
 }
 
-::-webkit-scrollbar {
-	width: 0%;
-	height: 0%;
-}
 
 /* Overview of the Maps */
 .overview {
