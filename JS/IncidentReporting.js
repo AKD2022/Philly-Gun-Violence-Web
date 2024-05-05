@@ -1,15 +1,16 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-import { getMessaging , getToken} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-messaging.js"
+import { getMessaging, getToken } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-messaging.js"
 
-const firebaseConfig = { 
-    apiKey: "AIzaSyBp_zqXnC5fO0-HLdPqCy-fPpc0weOBbiM", 
-    authDomain: "incidentreporting-91be7.firebaseapp.com", 
-    databaseURL: "https://incidentreporting-91be7-default-rtdb.firebaseio.com", 
+const firebaseConfig = {
+    apiKey: "AIzaSyBp_zqXnC5fO0-HLdPqCy-fPpc0weOBbiM",
+    authDomain: "incidentreporting-91be7.firebaseapp.com",
+    databaseURL: "https://incidentreporting-91be7-default-rtdb.firebaseio.com",
     projectId: "incidentreporting-91be7",
-    storageBucket: "incidentreporting-91be7.appspot.com", 
-    messagingSenderId: "952441251953", 
-    appId: "1:952441251953:web:d3e7001303b47e8b0953d0" 
+    storageBucket: "incidentreporting-91be7.appspot.com",
+    messagingSenderId: "952441251953",
+    appId: "1:952441251953:web:d3e7001303b47e8b0953d0"
 };
+
 
 // Initialize Firebase
 const app = firebase.initializeApp(firebaseConfig);
@@ -19,12 +20,15 @@ var incidentFormDB = firebase.database().ref('IncidentForm');
 
 document.getElementById('incidentForm').addEventListener("submit", submitForm);
 
+var notificationData;
+
 function submitForm(e) {
-    e.preventDefault();
     var location = getElementVal('location');
     var date = getElementVal('date');
     var descContent = getElementVal('descContent');
     var sectionPhilly = getElementVal('sectionPhilly');
+
+    e.preventDefault();
 
     if (location === "") {
         location = "<i>No Location Provided<i>";
@@ -51,12 +55,14 @@ function submitForm(e) {
     // Remove Alert & Reset Form
     setTimeout(() => {
         document.querySelector('.alert').style.display = 'none';
+        notif(descContent);
         window.location.reload(true);
     }, 2500);
 
     document.getElementById("incidentForm").reset();
-
 }
+
+
 
 const saveMessages = (location, date, descContent, sectionPhilly) => {
     var newIncidentForm = incidentFormDB.push();
@@ -79,6 +85,7 @@ const saveMessages = (location, date, descContent, sectionPhilly) => {
     cell3.innerHTML = date;
     cell4.innerHTML = descContent;
 };
+
 
 
 const getElementVal = (id) => {
@@ -114,15 +121,30 @@ incidentFormDB.on('value', function (snapshot) {
     }
 });
 
+/* Sending Notification */
+function notif(descContent) {
+    Notification.requestPermission().then(perm => {
+        if (perm == "granted") {
+            const notification = new Notification("New Incident Reported", {
+                body: descContent,
+                icon: "images/Website-logo.png",
+            });
+            notification.onclick = function () {
+                window.open("https://akd2022.github.io/Philly-Gun-Violence-Web/IncidentReporting.html");
+            };
+        }
+    });
+}
+
 /* Question Button */
 const question_button = document.getElementById("question_button");
 const explain_box = document.getElementById("explain_box");
 
-question_button.addEventListener("mouseover", function() {
-  explain_box.style.display = 'block';
+question_button.addEventListener("mouseover", function () {
+    explain_box.style.display = 'block';
 });
-question_button.addEventListener("mouseout", function() {
-  explain_box.style.display = 'none';
+question_button.addEventListener("mouseout", function () {
+    explain_box.style.display = 'none';
 });
 
 /* Close and Open Report Form */
