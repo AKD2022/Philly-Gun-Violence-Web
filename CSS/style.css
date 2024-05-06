@@ -29,13 +29,13 @@ body {
 
 
 @keyframes animate {
-    0%, 10%, 100% {
+    0%, 20%, 30% {
         background-image: url(../images/statistics-home-1.jpeg);
     }
-    20%, 30% {
+    30%, 40% {
         background-image: url(../images/statistics-home-2.jpeg);
     }
-    40%, 50%{
+    50%, 55%{
         background-image: url(../images/Home-1.jpeg);
     }
     60%, 70% {

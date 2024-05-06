@@ -185,7 +185,7 @@ html, body {
 }
 
 .header {
-	font-size: calc(0.5em + 1vw);
+	font-size: calc(0.4em + 1vw);
 }
 
 .description {
@@ -194,7 +194,7 @@ html, body {
 }
 
 .map-text {
-	font-size: calc(0.3e, + 1vw);
+	font-size: calc(0.3em + 1vw);
 	padding-bottom: 20px;
 }
 
@@ -491,7 +491,7 @@ button {
 	}
 }
 
-@media (max-width: 442px) {
+@media (max-width: 450px) {
 	#northMap.visible, #southMap.visible, #westMap.visible {
 		height: 25em !important;
 		width: 28em !important;
@@ -529,4 +529,3 @@ button {
 		font-size: 75%;
 	}
 }
-

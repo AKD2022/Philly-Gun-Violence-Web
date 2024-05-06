@@ -1,9 +1,8 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
+    removePreloader();
     const animationsPlayed = sessionStorage.getItem('animationsPlayed');
     const slideshow = document.querySelector(".container");
-    slideshow.classList.add("start-slideshow");
 
-    removePreloader();
     function runAnimations() {
         const texts = document.querySelectorAll(".text");
         let delay = 450;
@@ -17,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
             sessionStorage.setItem('animationsPlayed', true);
         });
     }
+    slideshow.classList.add("start-slideshow");
 
     if (!animationsPlayed || (window.performance && performance.navigation.type === 1)) {
         runAnimations();
@@ -34,3 +34,9 @@ var preloader = document.getElementById("preloader");
 function removePreloader() {
     preloader.classList.add("removePreloader");
 }
+
+
+/* Splash Screen */
+setTimeout(function () {
+    document.querySelector('.splash-screen').classList.add('fade-out');
+}, 4000);
